@@ -1,0 +1,4 @@
+docker-compose.yml
+Dockerfile
+postgres_data/
+.env

@@ -1,0 +1,119 @@
+header {
+    display: block;
+    background-color: $white;
+    height: 48px;
+    nav {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      margin: auto 32px;
+      height: 48px;
+      #logo{
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        img{
+          width: 32px;
+        }
+        span{
+          display: inline-block;
+          margin-left: 6px;
+        }
+      }
+      >button{
+        border-radius: 8px;
+        background-color: #fff;
+        border: 2px solid $background;
+        cursor: pointer;
+        height: 32px;
+        font-size: 24px;
+      }
+      #offcanvas{
+        position: fixed;
+        top: 0;
+        right: -300px; // La posición inicial fuera de la pantalla
+        width: 300px;
+        height: 100vh;
+        background-color: #fff;
+        box-shadow: -3px 0px 10px rgba(0, 0, 0, 0.2);
+        transition: right 0.3s ease-in-out;
+        z-index: 100;
+        ul {
+          list-style: none;
+          padding: 20px;
+          li {
+            margin-bottom: 15px;
+            font-size: 18px;
+            &:first-child{
+              position: relative;
+              top: -15px;
+              button{
+                border: none;
+                background-color: transparent;
+                font-size: 20px;
+                cursor: pointer;
+                margin-top: 32px;
+              }
+            }
+            a{
+              color: $background
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+@media only screen and (min-width:1100px){
+  header{
+    height: 64px;
+    nav{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+      >button{
+      display: none;
+        i{
+          display: none;
+        }
+      }
+    #offcanvas{
+        position: static;
+        right: 0px;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        box-shadow: none;
+        height: 100%;
+        ul{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          height: 100%;
+          align-items: center;
+          li{
+            margin: 0px 12px;
+            height: 64px;
+            &:first-child{
+              display: none;
+            }
+            transition: all .3s;
+            &:hover{
+              background-color: lighten($white, 15%);
+            }
+            a{
+              position: relative;
+              top: 28%;
+              left: 0px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

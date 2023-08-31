@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: block;
+  background-color: #F9F9F9;
+  height: 48px;
+}
+header nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto 32px;
+  height: 48px;
+}
+header nav #logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+header nav #logo img {
+  width: 32px;
+}
+header nav #logo span {
+  display: inline-block;
+  margin-left: 6px;
+}
+header nav > button {
+  border-radius: 8px;
+  background-color: #fff;
+  border: 2px solid #0F1624;
+  cursor: pointer;
+  height: 32px;
+  font-size: 24px;
+}
+header nav #offcanvas {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100vh;
+  background-color: #fff;
+  box-shadow: -3px 0px 10px rgba(0, 0, 0, 0.2);
+  transition: right 0.3s ease-in-out;
+  z-index: 100;
+}
+header nav #offcanvas ul {
+  list-style: none;
+  padding: 20px;
+}
+header nav #offcanvas ul li {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+header nav #offcanvas ul li:first-child {
+  position: relative;
+  top: -15px;
+}
+header nav #offcanvas ul li:first-child button {
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+  cursor: pointer;
+  margin-top: 32px;
+}
+header nav #offcanvas ul li a {
+  color: #0F1624;
+}
+
+@media only screen and (min-width: 1100px) {
+  header {
+    height: 64px;
+  }
+  header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+  header nav > button {
+    display: none;
+  }
+  header nav > button i {
+    display: none;
+  }
+  header nav #offcanvas {
+    position: static;
+    right: 0px;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    box-shadow: none;
+    height: 100%;
+  }
+  header nav #offcanvas ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+  }
+  header nav #offcanvas ul li {
+    margin: 0px 12px;
+    height: 64px;
+    transition: all 0.3s;
+  }
+  header nav #offcanvas ul li:first-child {
+    display: none;
+  }
+  header nav #offcanvas ul li:hover {
+    background-color: white;
+  }
+  header nav #offcanvas ul li a {
+    position: relative;
+    top: 28%;
+    left: 0px;
+  }
+}
+body {
+  background-color: #0F1624;
+}
+
+/*# sourceMappingURL=style.css.map */
