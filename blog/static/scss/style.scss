@@ -4,6 +4,7 @@
 @import 'main/image-background';
 @import 'main/search/search';
 @import 'main/search/buttons';
+@import 'main/indexPosts';
 *{
     margin: 0;
     padding: 0;
@@ -14,4 +15,8 @@
 
 body{
     background-color: $background
+}
+
+section{
+    margin-bottom: 72px;
 }

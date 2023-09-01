@@ -27,6 +27,11 @@ h5 {
   font-size: 1.25rem;
 }
 
+strong {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
 h6 {
   font-size: 1rem;
 }
@@ -89,6 +94,8 @@ header nav > button {
   height: 32px;
   font-size: 24px;
   color: #F9F9F9;
+  display: grid;
+  place-content: center;
 }
 header nav #offcanvas {
   position: fixed;
@@ -99,7 +106,7 @@ header nav #offcanvas {
   background-color: #0F1624;
   box-shadow: -3px 0px 10px rgba(0, 0, 0, 0.2);
   transition: right 0.3s ease-in-out;
-  z-index: 100;
+  z-index: 1000;
 }
 header nav #offcanvas ul {
   list-style: none;
@@ -279,6 +286,96 @@ footer a:hover {
   color: #F9F9F9;
 }
 
+.posts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.posts article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  width: 225px;
+  height: 360px;
+  border-radius: 4px;
+  border: 0.25px solid #F9F9F9;
+  color: #F9F9F9;
+  box-shadow: 1px 2px 4px 0px rgba(249, 249, 249, 0.25);
+}
+.posts article div.post-image img {
+  width: 200px;
+  height: 136px;
+  object-fit: cover;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  border-radius: 4px;
+}
+.posts article p {
+  text-align: start;
+  margin: 0px 12px;
+  font-size: 0.8rem;
+}
+.posts article div {
+  display: grid;
+  width: 100%;
+}
+.posts article div.all_options {
+  grid-template-columns: 1fr 1fr;
+  grid-row: 1fr 1fr;
+  grid-template-areas: "view view" "edit delete";
+  gap: 8px;
+  justify-items: center;
+}
+.posts article div.all_options a:first-child {
+  grid-area: view;
+}
+.posts article div.all_options a:nth-child(2) {
+  grid-area: edit;
+  background-color: #BD83B8;
+  margin-right: 4px;
+}
+.posts article div.all_options a:last-child {
+  grid-area: delete;
+  background-color: #CA0000;
+  margin-left: 4px;
+}
+.posts article div.all_options a:nth-child(2), .posts article div.all_options a:last-child {
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  padding: 8px;
+  transition: all 0.8s ease-in-out;
+}
+.posts article div.all_options a:nth-child(2) i, .posts article div.all_options a:last-child i {
+  font-size: 16px;
+}
+.posts article div.view {
+  place-content: center;
+}
+.posts article div a {
+  display: grid;
+  place-content: center;
+  margin: 4px auto;
+}
+.posts article div a:first-child {
+  border-radius: 32px;
+  background: linear-gradient(90deg, #473E66 0%, #BD83B8 100%);
+  padding: 8px 16px;
+  transition: all 0.8s ease-in-out;
+  width: 155px;
+  height: 32px;
+}
+.posts article div a:first-child:hover {
+  background: linear-gradient(90deg, #BD83B8 0%, #473E66 100%);
+}
+.posts article div a:first-child:active {
+  background: linear-gradient(90deg, #BD83B8 0%, #473E66 100%);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -287,6 +384,10 @@ footer a:hover {
 
 body {
   background-color: #0F1624;
+}
+
+section {
+  margin-bottom: 72px;
 }
 
 /*# sourceMappingURL=style.css.map */

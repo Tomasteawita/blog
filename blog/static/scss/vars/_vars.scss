@@ -21,9 +21,14 @@ h4{
 h5{
     font-size: 1.25rem;
 }
+strong{
+    font-weight: 700;
+    font-size: 1.25rem;
+}
 h6{
     font-size: 1rem;
 }
+
 p{
     font-size: 1rem;
 }
@@ -34,6 +39,7 @@ $background:#0F1624;
 $violet:#473E66;
 $pink:#BD83B8;
 $white:#F9F9F9;
+$red:#CA0000;
 
 a{
     text-decoration: none;

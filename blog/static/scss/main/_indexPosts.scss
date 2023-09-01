@@ -1,0 +1,94 @@
+.posts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    article{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        text-align: center;
+        width: 225px;
+        height: 360px;
+        border-radius:4px ;
+        border: .25px solid $white;
+        color: $white;
+        box-shadow: 1px 2px 4px 0px rgba(249, 249, 249, 0.25);
+        div.post-image{
+            img{
+                width: 200px;
+                height: 136px;
+                object-fit: cover;
+                position: relative;
+                top: 0px;
+                left: 0px;
+                border-radius: 4px;
+            }
+        }
+        p{
+            text-align: start;
+            margin: 0px 12px;
+            font-size: 0.8rem;
+        }
+        div{
+            display: grid;
+            width: 100%;
+            &.all_options{
+                grid-template-columns: 1fr 1fr;
+                grid-row: 1fr 1fr;
+                grid-template-areas: 
+                "view view"
+                "edit delete";
+                gap: 8px;
+                justify-items: center;
+                a:first-child{
+                    grid-area: view;
+                }
+                a:nth-child(2){
+                    grid-area: edit;
+                    background-color: $pink;
+                    margin-right: 4px;
+                }
+                a:last-child{
+                    grid-area: delete;
+                    background-color: $red;
+                    margin-left: 4px;
+                }
+                a:nth-child(2),a:last-child{
+                    border-radius: 50%;
+                    width: 32px;
+                    height: 32px;
+                    padding: 8px;
+                    transition: all 0.8s ease-in-out;
+                    i{
+                        font-size: 16px;
+                    }
+                }
+            }
+            &.view{
+                place-content: center;
+            }
+            a{
+                display: grid;
+                place-content: center;
+                margin: 4px auto;
+            }
+            a:first-child{
+                border-radius: 32px;
+                background: linear-gradient(90deg, $violet 0%, $pink 100%);
+                padding: 8px 16px;
+                transition: all 0.8s ease-in-out;
+                width: 155px;
+                height: 32px;
+                &:hover{
+                    background: linear-gradient(90deg, $pink 0%, $violet 100%);
+                }
+                &:active{
+                    background: linear-gradient(90deg, $pink 0%, $violet 100%);
+                }
+
+            }
+        }
+    }
+}
