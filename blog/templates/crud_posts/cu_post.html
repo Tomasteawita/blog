@@ -1,0 +1,27 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block main %}
+<main>
+    <section class="image-background">
+        <img id="imagePreView">
+        <div></div>
+    </section>
+    <section>
+        <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <ul>
+                {{ form.media }}
+                {{ form.as_ul }}
+            </ul>
+            <button type="submit" value="Up">Subir</button>
+        </form>
+    </section>
+</main>
+{% endblock main %}
+{% block scripts %}
+    <script src="{% static 'js/preViewImage.js' %}"></script>
+    <script src="{% static 'ckeditor/ckeditor.js' %}"></script>
+    <script>
+        CKEDITOR.replace('{{ form.body.id_for_label }}');
+    </script>
+{% endblock scripts %}

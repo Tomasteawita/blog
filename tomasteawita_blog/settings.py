@@ -138,14 +138,21 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CKEDITOR_UPLOAD_PATH = "uploads/"
+CKEDITOR_UPLOAD_PATH = "ckeditor_uploads/"
 CKEDITOR_BASEPATH = "/static/ckeditor/ckeditor/"
 
 
 CKEDITOR_CONFIGS = {
     'default': {
-        'toolbar': 'full',
+        'toolbar': 'Custom',
+        'toolbar_Custom': [
+            ['Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript'],
+            ['NumberedList', 'BulletedList', 'Blockquote', 'Image', 'Link'],
+            ['RemoveFormat', 'Source'],
+        ],
+        'width': 800,
         'height': 300,
-        'width': '100%',
     },
 }
+
+CKEDITOR_FILENAME_GENERATOR = 'utils.get_filename'

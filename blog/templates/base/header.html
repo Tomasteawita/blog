@@ -5,6 +5,9 @@
             <li><a href="#">Servicio</a></li>
             <li><a href="#contact">Contacto</a></li>
             <li><a href="#">Acerca de mi</a></li>
+            {% if user.is_authenticated %}
+                <li><a href="{% url 'CreatePost' %}">Create Post</a></li>
+            {% endif %}
         </ul>
         <button id="open-button"><i class="bi bi-list"></i></button>
         <div id="offcanvas">
@@ -14,6 +17,9 @@
                 <li><a href="#">Servicio</a> </li>
                 <li><a href="#contact">Contacto</a></li>
                 <li><a href="#">Acerca de mi</a></li>
+                {% if user.is_authenticated %}
+                <li><a href="{% url 'CreatePost' %}">Create Post</a></li>
+            {% endif %}
             </ul>
         </div>
     </nav>

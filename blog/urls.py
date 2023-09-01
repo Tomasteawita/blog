@@ -3,6 +3,11 @@ from django.urls import path
 from .views import *
 from django.conf.urls.static import static
 
+
+url_crud_post = [
+    path('create/',CreatePostView.as_view(),name="CreatePost"),
+]
+
 urlpatterns = [
     path('',IndexView.as_view(),name="index"),
     # path('detailPost/<int:post_id>',detail_post,name="DetailPost"),
@@ -19,4 +24,4 @@ urlpatterns = [
     # path('editUser/',edit_user, name="edit user"),
     # path('editAvatar/',edit_avatar, name='edit avatar'),
     # path('createAvatar/',create_avatar, name='create avatar')
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + url_crud_post + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -47,3 +47,10 @@ class IndexView(View):
             posts = Post.objects.all()
 
         return render(request, self.template_name, {'posts': posts, 'show_tag_buttons': show_tag_buttons})
+
+class CreatePostView(CreateView):
+    model = Post
+    success_url = '/'
+    template_name = 'crud_posts/cu_post.html'
+    form_class = PostForm
+    
