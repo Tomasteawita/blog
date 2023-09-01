@@ -299,13 +299,13 @@ footer a:hover {
   justify-content: space-around;
   text-align: center;
   width: 225px;
-  height: 360px;
+  height: 382px;
   border-radius: 4px;
   border: 0.25px solid #F9F9F9;
   color: #F9F9F9;
   box-shadow: 1px 2px 4px 0px rgba(249, 249, 249, 0.25);
 }
-.posts article div.post-image img {
+.posts article img {
   width: 200px;
   height: 136px;
   object-fit: cover;
@@ -313,6 +313,7 @@ footer a:hover {
   top: 0px;
   left: 0px;
   border-radius: 4px;
+  margin-top: 12px;
 }
 .posts article p {
   text-align: start;
