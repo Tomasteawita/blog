@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import 'vars/vars';
+@import 'main/header';
 
 *{
     margin: 0;
@@ -6,9 +7,8 @@
     box-sizing: border-box;
 }
 
-@import 'vars/vars';
-@import 'main/header';
 
-body{
-    background-color: $background
-}
+
+// body{
+//     background-color: $background
+//}
