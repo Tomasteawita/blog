@@ -1,5 +1,6 @@
 @import 'vars/vars';
 @import 'main/header';
+@import 'main/footer';
 
 *{
     margin: 0;
@@ -9,6 +10,6 @@
 
 
 
-// body{
-//     background-color: $background
-//}
+body{
+    background-color: $background
+}
