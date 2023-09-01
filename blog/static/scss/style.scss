@@ -1,7 +1,8 @@
 @import 'vars/vars';
-@import 'main/header';
-@import 'main/footer';
-
+@import 'base/header';
+@import 'base/footer';
+@import 'main/image-background';
+@import 'main/search';
 *{
     margin: 0;
     padding: 0;

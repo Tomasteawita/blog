@@ -1,0 +1,17 @@
+.image-background{
+    height: 230px;
+    img{
+        position: relative;
+        width: 100%;
+        height: 230px;
+        object-fit: cover;
+    }
+    div{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background: rgba(15, 22, 36, 0.50);
+        width: 100%;
+        height: 230px;
+    }
+}
