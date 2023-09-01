@@ -1,0 +1,21 @@
+.search{
+    form:last-child{
+        margin: 20px auto 0px auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+
+        button.tag_search{
+            background-color: $violet;
+            width: auto;
+            height: 24px;
+            border-radius: 32px;
+            box-shadow: 1px 2px 2px 0px rgba(249, 249, 249, 0.25);
+            border: none;
+            padding: 4px 12px;
+            color: $white;
+        }
+    }
+}

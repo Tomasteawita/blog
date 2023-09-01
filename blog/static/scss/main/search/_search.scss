@@ -2,7 +2,7 @@
     display: grid;
     place-content: center;
     height: 98px;
-    form{
+    form:first-child{
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -17,7 +17,7 @@
             border: none;
             padding: 4px 12px;
         }
-        button{
+        button.seek{
             background-color: $white;
             width: 32px;
             height: 24px;
@@ -32,7 +32,7 @@
                 left: 1px;
             }
         }
-        input,button{
+        input,button.seek{
             outline: none;
             transition: all .3s;
         }

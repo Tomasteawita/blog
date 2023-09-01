@@ -23,9 +23,16 @@
         <div></div>
     </section>
     <section class="search">
-        <form method="GET">
+        <form method="get"> {% csrf_token %}
             <input type="text" name="search" placeholder="Buscar...">
-            <button type="submit"><i class="bi bi-search"></i></button>
+            <button class="seek" type="submit"><i class="bi bi-search"></i></button>
+        </form>
+        <form method="get"> {% csrf_token %}
+            {% for tag in show_tag_buttons %}
+                <button class="tag_search" type="submit" name="tag_id" value="{{tag.id}}" id="tag_id" >
+                    # {{tag}}
+                </button> 
+            {% endfor %}
         </form>
     </section>
 </main>

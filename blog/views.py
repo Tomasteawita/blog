@@ -11,14 +11,21 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse, reverse_lazy
 
-class IndexView(ListView):
+class IndexView(View):
     template_name = 'index.html'
-    model = Post
 
-    def get_queryset(self):
-        return Post.objects.filter(user_id = self.request.user.id)
+    def get(self, request):
+        tag_id = request.GET.get('tag_id')
+        
+        # Obtener todos los tags únicos relacionados con los posts
+        show_tag_buttons = Tag.objects.filter(post__isnull=False).distinct()
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        return context
-    
+        if tag_id:
+            posts = Post.objects.filter(tags__id=tag_id)
+        else:
+            posts = Post.objects.all()
+
+        return render(request, self.template_name, {'posts': posts, 'show_tag_buttons': show_tag_buttons})
+
+
+
