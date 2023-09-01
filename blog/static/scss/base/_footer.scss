@@ -17,6 +17,7 @@ footer{
             align-items: center;
             justify-content: center;
             list-style-type: none;
+            margin: 24px auto;
             li{
                 margin: 0px 12px;
                 height: 32px;
@@ -35,6 +36,31 @@ footer{
                     margin-right: 6px;
                 }
 
+            }
+        }
+        @media only screen and (min-width: 768px){
+            flex-direction: row;
+            align-items: flex-start;
+            ul{
+                margin: 12px 64px;
+                li{
+                    margin: 0px 12px;
+                    height: 32px;
+                    transition: all .3s;
+                    border-radius: 8px;
+                    padding: 2px 4px;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    a{
+                        display: inline-block;
+                    }
+                    i{
+                        font-size: 16px;
+                        margin-right: 6px;
+                    }
+                }
             }
         }
     }
