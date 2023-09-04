@@ -50,7 +50,24 @@ class IndexView(View):
 
 class CreatePostView(CreateView):
     model = Post
+    success_url = 'crud_posts/cu_post_confirmed.html'
+    template_name = 'crud_posts/cu_post.html'
+    form_class = PostForm
+
+class DeletePostView(DeleteView):
+    model = Post
+    success_url = 'crud_posts/d_post_confirmed.html'
+    template_name = 'd_post.html'
+
+class EditPostView(UpdateView):
+    model = Post
     success_url = '/'
     template_name = 'crud_posts/cu_post.html'
     form_class = PostForm
-    
+
+class DetailPostView(View):
+    template_name = 'crud_posts/r_post.html'
+
+    def get(self, request, pk):
+        post = Post.objects.get(pk=pk)
+        return render(request, self.template_name, {'post': post})

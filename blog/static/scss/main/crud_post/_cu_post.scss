@@ -1,0 +1,55 @@
+main.create-update{
+    section.image-background{
+        background-color: gray;
+    }
+    section.form-ckeditor{
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 24px;
+            margin-bottom: 24px;
+            ul{
+                list-style-type: none;
+            }
+            input{
+                width: 90%;
+                margin-bottom: 24px;
+                background-color: $white;
+                border-radius: 12px;
+                padding: 4px 12px;
+                border: none;
+            }
+            textarea{
+                width: 100%;
+                margin-bottom: 24px;
+            }
+            button{
+                width: 128px;
+                margin-bottom: 24px;
+                background-color: $violet;
+                border-radius: 12px;
+                padding: 4px 12px;
+                border: none;
+                color: $white;
+                cursor: pointer;
+                &:hover{
+                    background-color: $violet-hover;
+                }
+                &:active{
+                    background-color: $violet-active;
+                }
+            }
+            li{
+                margin: 42px auto;
+                label, input{
+                    margin-left: 12px;
+                }
+                label{
+                    color: $white;
+                }
+            }
+        }
+    }
+}

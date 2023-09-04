@@ -166,6 +166,9 @@ footer nav ul li {
   align-items: center;
   justify-content: center;
 }
+footer nav ul li.title {
+  margin-bottom: 12px;
+}
 footer nav ul li a {
   display: inline-block;
 }
@@ -229,7 +232,8 @@ footer a:hover {
 .search {
   display: grid;
   place-content: center;
-  height: 98px;
+  height: 128px;
+  gap: 42px;
 }
 .search form:first-child {
   display: flex;
@@ -267,23 +271,33 @@ footer a:hover {
   transition: all 0.3s;
 }
 
-.search form:last-child {
-  margin: 20px auto 0px auto;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-}
 .search form:last-child button.tag_search {
+  display: inline-block;
   background-color: #473E66;
-  width: auto;
   height: 24px;
   border-radius: 32px;
   box-shadow: 1px 2px 2px 0px rgba(249, 249, 249, 0.25);
   border: none;
   padding: 4px 12px;
   color: #F9F9F9;
+}
+.search form:last-child button.tag_search span {
+  text-align: start;
+  display: inline-block;
+  width: max-content;
+}
+
+form.formButtons {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
+}
+form.formButtons button {
+  margin: 12px;
+  scroll-snap-align: center;
 }
 
 .posts {
@@ -304,6 +318,7 @@ footer a:hover {
   border: 0.25px solid #F9F9F9;
   color: #F9F9F9;
   box-shadow: 1px 2px 4px 0px rgba(249, 249, 249, 0.25);
+  margin: 42px auto;
 }
 .posts article img {
   width: 200px;
@@ -377,6 +392,58 @@ footer a:hover {
   background: linear-gradient(90deg, #BD83B8 0%, #473E66 100%);
 }
 
+main.create-update section.image-background {
+  background-color: gray;
+}
+main.create-update section.form-ckeditor form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+main.create-update section.form-ckeditor form ul {
+  list-style-type: none;
+}
+main.create-update section.form-ckeditor form input {
+  width: 90%;
+  margin-bottom: 24px;
+  background-color: #F9F9F9;
+  border-radius: 12px;
+  padding: 4px 12px;
+  border: none;
+}
+main.create-update section.form-ckeditor form textarea {
+  width: 100%;
+  margin-bottom: 24px;
+}
+main.create-update section.form-ckeditor form button {
+  width: 128px;
+  margin-bottom: 24px;
+  background-color: #473E66;
+  border-radius: 12px;
+  padding: 4px 12px;
+  border: none;
+  color: #F9F9F9;
+  cursor: pointer;
+}
+main.create-update section.form-ckeditor form button:hover {
+  background-color: #5d5186;
+}
+main.create-update section.form-ckeditor form button:active {
+  background-color: #312b46;
+}
+main.create-update section.form-ckeditor form li {
+  margin: 42px auto;
+}
+main.create-update section.form-ckeditor form li label, main.create-update section.form-ckeditor form li input {
+  margin-left: 12px;
+}
+main.create-update section.form-ckeditor form li label {
+  color: #F9F9F9;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -388,7 +455,7 @@ body {
 }
 
 section {
-  margin-bottom: 72px;
+  margin-bottom: 24px;
 }
 
 /*# sourceMappingURL=style.css.map */

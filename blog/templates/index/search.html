@@ -3,10 +3,10 @@
         <input type="text" name="search" placeholder="Buscar...">
         <button class="seek" type="submit"><i class="bi bi-search"></i></button>
     </form>
-    <form method="get"> {% csrf_token %}
+    <form method="get" class="formButtons"> {% csrf_token %}
         {% for tag in show_tag_buttons %}
             <button class="tag_search" type="submit" name="tag_id" value="{{tag.id}}" id="tag_id" >
-                # {{tag}}
+               <span># {{tag}}</span>
             </button> 
         {% endfor %}
     </form>

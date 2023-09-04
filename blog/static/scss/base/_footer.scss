@@ -28,6 +28,9 @@ footer{
                 flex-direction: row;
                 align-items: center;
                 justify-content: center;
+                &.title{
+                    margin-bottom: 12px;
+                }
                 a{
                     display: inline-block;
                 }

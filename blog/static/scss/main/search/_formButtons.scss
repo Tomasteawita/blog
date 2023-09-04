@@ -1,0 +1,13 @@
+form.formButtons{
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+    button{
+        margin: 12px;
+        scroll-snap-align: center;
+    }
+}
+  

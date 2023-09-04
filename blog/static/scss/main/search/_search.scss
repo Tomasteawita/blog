@@ -1,7 +1,8 @@
 .search{
     display: grid;
     place-content: center;
-    height: 98px;
+    height: 128px;
+    gap: 42px;
     form:first-child{
         display: flex;
         flex-direction: row;

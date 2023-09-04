@@ -1,12 +1,12 @@
 {% extends 'base/base.html' %}
 {% load static %}
 {% block main %}
-<main>
+<main class="create-update">
     <section class="image-background">
         <img id="imagePreView">
         <div></div>
     </section>
-    <section>
+    <section class="form-ckeditor">
         <form action="" method="post" enctype="multipart/form-data">
             {% csrf_token %}
             <ul>
@@ -19,7 +19,7 @@
 </main>
 {% endblock main %}
 {% block scripts %}
-    <script src="{% static 'js/preViewImage.js' %}"></script>
+    <script src="{% static 'js/createUpdatePost.js' %}"></script>
     <script src="{% static 'ckeditor/ckeditor.js' %}"></script>
     <script>
         CKEDITOR.replace('{{ form.body.id_for_label }}');
