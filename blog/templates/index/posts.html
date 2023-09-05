@@ -7,13 +7,13 @@
             <p>{{post.description}}</p>
             {% if user.is_authenticated %}
                 <div class="all_options">
-                    <a href=""><span>Leer más</span></a>
+                    <a href="{% url 'DetailPost' post.id %}"><span>Leer más</span></a>
                     <a href=""><i class="bi bi-pencil-square"></i></a>
                     <a href=""><i class="bi bi-trash3-fill"></i></a>
                 </div>
             {% else %}
                 <div class="view">
-                    <a href=""><span>Leer más</span></a>
+                    <a href="{% url 'DetailPost' post.id %}"><span>Leer más</span></a>
                 </div>
             {% endif %}
         </article>

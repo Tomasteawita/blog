@@ -1,0 +1,28 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block main %}
+<!-- content post -->
+<main class="detailPost">
+    <section class="image-background">
+        <img src="{{post.image.url}}" alt="Tomasteawita">
+        <div></div>
+    </section>
+    <section>
+        <div><h2>Post:<span></span></h2></div>
+        <nav>
+            <a href="">Inicio</a><span>/</span><a href="">Post</a>
+        </nav>
+    </section>
+    <section>
+        <div>
+            <h2>{{post.title}}</h2>
+            <p>{{post.description}}</p>
+        </div>
+        <article>
+            <!-- ckeditor content -->
+
+            {{post.body|safe}}
+        </article>
+    </section>
+</main>
+{% endblock main %}

@@ -2,6 +2,9 @@ form.formButtons{
     display: flex;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
+    &::-webkit-scrollbar {
+        display: none;
+    }
     flex-direction: row;
     gap: 12px;
     align-items: center;

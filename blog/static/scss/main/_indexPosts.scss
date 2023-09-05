@@ -91,4 +91,13 @@
             }
         }
     }
+    @media only screen and (min-width:834px){
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        article{
+            margin: 42px 12px;
+        }
+        
+    }
 }

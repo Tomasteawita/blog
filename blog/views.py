@@ -70,4 +70,7 @@ class DetailPostView(View):
 
     def get(self, request, pk):
         post = Post.objects.get(pk=pk)
+        print(post.tags.all())
+        print(post.body.split('\n'))
+        
         return render(request, self.template_name, {'post': post})
