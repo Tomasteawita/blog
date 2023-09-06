@@ -38,7 +38,6 @@ class IndexView(View):
         """
         tag_id = request.GET.get('tag_id')
         
-        # Obtener todos los tags únicos relacionados con los posts
         show_tag_buttons = Tag.objects.filter(post__isnull=False).distinct()
 
         if tag_id:
@@ -70,7 +69,5 @@ class DetailPostView(View):
 
     def get(self, request, pk):
         post = Post.objects.get(pk=pk)
-        print(post.tags.all())
-        print(post.body.split('\n'))
         
         return render(request, self.template_name, {'post': post})

@@ -1,0 +1,36 @@
+section.navigation{
+    background-color: $violet;
+    display: grid;
+    place-content: center;
+    height: 100px;
+    div{
+        display: grid;
+        place-content: center;
+        margin-top: 12px;
+        h2{
+            display: inline-block;
+            font-size: 18px;
+            font-weight: 700;
+            color: $white;
+        }
+    }
+    nav{
+        display: flex;
+        flex-direction:row ;
+        justify-content: center ;
+        align-items: center;
+        a{
+            color: $ligth-violet ;
+            &:hover{
+                text-decoration: underline;
+            }
+            &:active{
+                color: $violet-active;
+            }
+        }
+        span{
+            color: $white;
+            margin: 8px;
+        }
+    }
+}

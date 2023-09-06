@@ -457,7 +457,7 @@ main.create-update section.form-ckeditor form button:hover {
   background-color: #5d5186;
 }
 main.create-update section.form-ckeditor form button:active {
-  background-color: #312b46;
+  background-color: #1b1727;
 }
 main.create-update section.form-ckeditor form li {
   margin: 42px auto;
@@ -467,6 +467,90 @@ main.create-update section.form-ckeditor form li label, main.create-update secti
 }
 main.create-update section.form-ckeditor form li label {
   color: #F9F9F9;
+}
+
+main.detailPost .postContent {
+  color: #F9F9F9;
+}
+main.detailPost .postContent > div:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 21px;
+}
+main.detailPost .postContent > div:first-child h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+main.detailPost .postContent > div:first-child p {
+  font-weight: 400;
+  margin-bottom: 1rem;
+  font-family: "Poppins";
+  font-style: italic;
+}
+main.detailPost .postContent hr {
+  width: 90%;
+  margin: 12px auto 32px auto;
+}
+main.detailPost .postContent article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 21px;
+}
+main.detailPost .postContent article img {
+  width: 90%;
+  height: auto;
+  object-fit: cover;
+}
+main.detailPost .postContent article p {
+  margin: 12px auto;
+}
+main.detailPost .postContent article ul {
+  margin: 12px 24px;
+}
+main.detailPost .postContent article ul li {
+  margin: 12px 0;
+}
+
+section.navigation {
+  background-color: #473E66;
+  display: grid;
+  place-content: center;
+  height: 100px;
+}
+section.navigation div {
+  display: grid;
+  place-content: center;
+  margin-top: 12px;
+}
+section.navigation div h2 {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 700;
+  color: #F9F9F9;
+}
+section.navigation nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+section.navigation nav a {
+  color: #A693E5;
+}
+section.navigation nav a:hover {
+  text-decoration: underline;
+}
+section.navigation nav a:active {
+  color: #1b1727;
+}
+section.navigation nav span {
+  color: #F9F9F9;
+  margin: 8px;
 }
 
 * {
@@ -479,7 +563,7 @@ body {
   background-color: #0F1624;
 }
 
-section {
+section:not(.image-background.read_post) {
   margin-bottom: 24px;
 }
 

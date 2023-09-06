@@ -7,6 +7,8 @@
 @import 'main/search/formButtons';
 @import 'main/indexPosts';
 @import 'main/crud_post/_cu_post';
+@import 'main/crud_post/_r_post';
+@import 'main/navigation';
 
 *{
     margin: 0;
@@ -20,6 +22,6 @@ body{
     background-color: $background
 }
 
-section{
+section:not(.image-background.read_post){
     margin-bottom: 24px;
 }
