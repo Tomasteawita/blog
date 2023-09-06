@@ -1,15 +1,14 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 from .forms import *
 from .models import *
-from django.db.models import Prefetch
-from django.views.generic import ListView, View
+from django.views.generic import View
 from django.views.generic.edit import (
     CreateView, UpdateView, DeleteView
 )
 from django.contrib.auth.views import LoginView, LogoutView
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.urls import reverse, reverse_lazy
+from django.urls import reverse
 
 class IndexView(View):
     """
@@ -49,25 +48,40 @@ class IndexView(View):
 
 class CreatePostView(CreateView):
     model = Post
-    success_url = 'crud_posts/cu_post_confirmed.html'
     template_name = 'crud_posts/cu_post.html'
     form_class = PostForm
+    
+    def get_success_url(self):
+        return reverse('TransactionCompleted')
 
 class DeletePostView(DeleteView):
     model = Post
-    success_url = 'crud_posts/d_post_confirmed.html'
-    template_name = 'd_post.html'
-
-class EditPostView(UpdateView):
-    model = Post
-    success_url = '/'
-    template_name = 'crud_posts/cu_post.html'
-    form_class = PostForm
-
-class DetailPostView(View):
-    template_name = 'crud_posts/r_post.html'
-
+    template_name = 'crud_posts/d_post.html'
+    
+    def get_success_url(self):
+        return reverse('TransactionCompleted')
+    
     def get(self, request, pk):
         post = Post.objects.get(pk=pk)
         
         return render(request, self.template_name, {'post': post})
+
+class EditPostView(UpdateView):
+    model = Post
+    template_name = 'crud_posts/cu_post.html'
+    form_class = PostForm
+    
+    def get_success_url(self):
+        return reverse('TransactionCompleted')
+
+class DetailPostView(View):
+    template_name = 'crud_posts/r_post.html'
+    
+    def get(self, request, pk):
+        post = Post.objects.get(pk=pk)
+        
+        return render(request, self.template_name, {'post': post})
+
+
+def transaction_completed_view(request):
+    return render(request, 'crud_posts/transaction_completed.html')

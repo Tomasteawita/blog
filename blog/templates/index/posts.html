@@ -8,8 +8,8 @@
             {% if user.is_authenticated %}
                 <div class="all_options">
                     <a href="{% url 'DetailPost' post.id %}"><span>Leer más</span></a>
-                    <a href=""><i class="bi bi-pencil-square"></i></a>
-                    <a href=""><i class="bi bi-trash3-fill"></i></a>
+                    <a href="{% url 'EditPost' post.id %}"><i class="bi bi-pencil-square"></i></a>
+                    <a href="{% url 'DeletePost' post.id %}"><i class="bi bi-trash3-fill"></i></a>
                 </div>
             {% else %}
                 <div class="view">

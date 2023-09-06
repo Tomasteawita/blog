@@ -4,19 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eliminar Post</title>
+    <title>Transaccion completada</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
     <main class="cards-transition">
         <form method="post">
-            {% csrf_token %}
-            <h5>Eliminar <span>{{post}}</span></h5>
-            <div class="options-buttons">
-                <a href="{% url 'Index' %}"><span>Cancelar</span></a>
-                <button type="submit"><span>Eliminar</span></button>
+            <h5>Transacción completada</h5>
+            <div class="confirm">
+                <p>Te devolveremos al inicio en 3 segundos...</p>
             </div>
         </form>
     </main>
 </body>
+<script type="text/javascript">
+    setTimeout( function() { window.location.href = "{% url 'Index'%}"; }, 2000 );
+</script>
 </html>

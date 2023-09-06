@@ -1,0 +1,55 @@
+main.cards-transition {
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    form{
+        display: grid;
+        place-content: center;
+        gap: 24px;
+        width: 300px;
+        color: $white;
+        border: 1px solid $white;
+        border-radius: 8px;
+        padding: 32px 4px;
+        h5{
+            text-align: center;
+        }
+        div.options-buttons{
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: row;
+            a{
+                text-decoration: none;
+                color: $white;
+                font-size: 1.2rem;
+                font-weight: 600;
+                padding: 8px 16px;
+                border-radius: 8px;
+                transition: all 0.3s ease-in-out;
+                border: 1px solid $white;
+                background-color: $violet;
+                &:hover{
+                    background-color: $violet;
+                }
+            }
+            button{
+                font-size: 1.2rem;
+                font-weight: 600;
+                padding: 8px 16px;
+                border-radius: 8px;
+                transition: all 0.3s ease-in-out;
+                border: 1px solid $white;
+                background-color: $red;
+                color: $white;
+                &:hover{
+                    background-color: $violet;
+                }
+            }
+        }
+        div.confirm{
+            p{
+                text-align: center;
+            }
+        }
+  }
+}

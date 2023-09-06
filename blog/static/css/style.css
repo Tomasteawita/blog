@@ -553,6 +553,60 @@ section.navigation nav span {
   margin: 8px;
 }
 
+main.cards-transition {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+main.cards-transition form {
+  display: grid;
+  place-content: center;
+  gap: 24px;
+  width: 300px;
+  color: #F9F9F9;
+  border: 1px solid #F9F9F9;
+  border-radius: 8px;
+  padding: 32px 4px;
+}
+main.cards-transition form h5 {
+  text-align: center;
+}
+main.cards-transition form div.options-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+main.cards-transition form div.options-buttons a {
+  text-decoration: none;
+  color: #F9F9F9;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid #F9F9F9;
+  background-color: #473E66;
+}
+main.cards-transition form div.options-buttons a:hover {
+  background-color: #473E66;
+}
+main.cards-transition form div.options-buttons button {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid #F9F9F9;
+  background-color: #CA0000;
+  color: #F9F9F9;
+}
+main.cards-transition form div.options-buttons button:hover {
+  background-color: #473E66;
+}
+main.cards-transition form div.confirm p {
+  text-align: center;
+}
+
 * {
   margin: 0;
   padding: 0;

@@ -5,13 +5,15 @@ from django.conf.urls.static import static
 
 
 url_crud_post = [
-    path('create/',CreatePostView.as_view(),name="CreatePost"),
-    path('delete/<pk>',DeletePostView.as_view(),name="DeletePost"),
-    path('detail/<pk>',DetailPostView.as_view(),name="DetailPost"),
+    path('create/', CreatePostView.as_view(), name = "CreatePost"),
+    path('delete/<pk>', DeletePostView.as_view(), name = "DeletePost"),
+    path('detail/<pk>', DetailPostView.as_view(), name = "DetailPost"),
+    path('edit/<pk>', EditPostView.as_view(), name = "EditPost"),
+    path('transaction_completed/', transaction_completed_view, name = "TransactionCompleted"),
 ]
 
 urlpatterns = [
-    path('',IndexView.as_view(),name="Index"),
+    path('', IndexView.as_view(), name = "Index"),
     # path('detailPost/<int:post_id>',detail_post,name="DetailPost"),
     # path('detailUser/<int:user_id>',detail_user,name="DetailUser"),
     # path('confirm_delete_post/<pk>',delete_post.as_view(),name="DeletePost"),
