@@ -29,6 +29,10 @@ header {
             position: relative;
             top: 28%;
             left: 0px;
+            transition: all .3s;
+            &:hover{
+              text-decoration: underline;
+            }
           }
         }
         @media only screen and (max-width:600px){
@@ -45,6 +49,12 @@ header {
         color: $white;
         display:grid;
         place-content: center;
+        padding: 2px 4px 0px 4px;
+        transition: all .3s;
+        &:hover{
+          background-color: $white;
+          color: $background;
+        }
       }
       #offcanvas{
         position: fixed;
@@ -76,6 +86,30 @@ header {
             }
             a{
               color: $white;
+              &:hover{
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+    }
+    @media only screen and (min-width:1025px){
+      height: 64px;
+      nav{
+        height: 64px;
+        >button{
+          margin-right: 42px;
+          height: 42px;
+          width: 42px;
+          font-size: 32px;
+        }
+        >ul{
+          margin-left: 42px;
+          li{
+            height: 48px;
+            a{
+              top: 32%;
             }
           }
         }

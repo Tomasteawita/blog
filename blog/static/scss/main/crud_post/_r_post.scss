@@ -18,6 +18,9 @@ main.detailPost{
                 font-family: 'Poppins';
                 font-style: italic;
             }
+            span{
+                text-decoration:underline
+            }
         }
         hr{
             width: 90%;
@@ -45,6 +48,77 @@ main.detailPost{
             }
 
         }
-
+        @media only screen and (min-width:834px) and (max-width:1024px){
+            >div:first-child{
+                margin: 42px 64px;
+                align-items: flex-start;
+                justify-content: center;
+                h2{
+                    font-size: 2.4rem;
+                }
+                p{
+                    font-size: 1.2rem;
+                }
+            }
+            hr{
+                width: 80%;
+                margin: 32px auto;
+            }
+            article{
+                margin: 42px;
+                align-items: flex-start;
+                justify-content: center;
+                img{
+                    width: 80%;
+                }
+                p{
+                    font-size: 1.2rem;
+                    margin-left: 0px;
+                    margin-right:auto;
+                }
+                ul{
+                    margin: 24px 42px;
+                    li{
+                        margin: 12px 0;
+                    }
+                }
+            }
+        }
+        @media only screen and (min-width:1025px){
+            >div:first-child{
+                margin: 42px 128px;
+                align-items: flex-start;
+                justify-content: center;
+                h2{
+                    font-size: 2.4rem;
+                }
+                p{
+                    font-size: 1.2rem;
+                }
+            }
+            hr{
+                width: 80%;
+                margin: 32px auto;
+            }
+            article{
+                margin: 42px 128px;
+                align-items: flex-start;
+                justify-content: center;
+                img{
+                    width: 80%;
+                }
+                p{
+                    font-size: 1.2rem;
+                    margin-left: 0px;
+                    margin-right:auto;
+                }
+                ul{
+                    margin: 24px 42px;
+                    li{
+                        margin: 12px 0;
+                    }
+                }
+            }
+        }
     }
 }

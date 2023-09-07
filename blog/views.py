@@ -5,8 +5,6 @@ from django.views.generic import View
 from django.views.generic.edit import (
     CreateView, UpdateView, DeleteView
 )
-from django.contrib.auth.views import LoginView, LogoutView
-from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse
 
@@ -46,7 +44,7 @@ class IndexView(View):
 
         return render(request, self.template_name, {'posts': posts, 'show_tag_buttons': show_tag_buttons})
 
-class CreatePostView(CreateView):
+class CreatePostView(CreateView, LoginRequiredMixin):
     model = Post
     template_name = 'crud_posts/cu_post.html'
     form_class = PostForm
@@ -54,7 +52,7 @@ class CreatePostView(CreateView):
     def get_success_url(self):
         return reverse('TransactionCompleted')
 
-class DeletePostView(DeleteView):
+class DeletePostView(DeleteView, LoginRequiredMixin):
     model = Post
     template_name = 'crud_posts/d_post.html'
     
@@ -66,7 +64,7 @@ class DeletePostView(DeleteView):
         
         return render(request, self.template_name, {'post': post})
 
-class EditPostView(UpdateView):
+class EditPostView(UpdateView, LoginRequiredMixin):
     model = Post
     template_name = 'crud_posts/cu_post.html'
     form_class = PostForm

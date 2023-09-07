@@ -1,4 +1,4 @@
-.posts{
+section.posts{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -16,6 +16,14 @@
         color: $white;
         box-shadow: 1px 2px 4px 0px rgba(249, 249, 249, 0.25);
         margin: 42px auto;
+        transition: all 0.3s ease;
+        &:hover {
+            transform: scale(1.05) translate(0px, -8px); /* Puedes ajustar el valor para cambiar la escala */
+            box-shadow: 2px 4px 8px 0px rgba(249, 249, 249, 0.5);
+          }
+        strong{
+            margin: 12px 4px;
+        }
         img{
             width: 200px;
             height: 136px;
@@ -78,14 +86,13 @@
                 border-radius: 32px;
                 background: linear-gradient(90deg, $violet 0%, $pink 100%);
                 padding: 8px 16px;
-                transition: all 0.8s ease-in-out;
                 width: 155px;
                 height: 32px;
                 &:hover{
-                    background: linear-gradient(90deg, $pink 0%, $violet 100%);
+                    background: $violet;
                 }
                 &:active{
-                    background: linear-gradient(90deg, $pink 0%, $violet 100%);
+                    background: $violet;
                 }
 
             }
@@ -96,8 +103,7 @@
         flex-wrap: wrap;
         justify-content: space-evenly;
         article{
-            margin: 42px 12px;
+            margin: 42px 72px;
         }
-        
     }
 }

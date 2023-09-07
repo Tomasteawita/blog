@@ -80,6 +80,10 @@ header nav > ul li a {
   position: relative;
   top: 28%;
   left: 0px;
+  transition: all 0.3s;
+}
+header nav > ul li a:hover {
+  text-decoration: underline;
 }
 @media only screen and (max-width: 600px) {
   header nav > ul {
@@ -96,6 +100,12 @@ header nav > button {
   color: #F9F9F9;
   display: grid;
   place-content: center;
+  padding: 2px 4px 0px 4px;
+  transition: all 0.3s;
+}
+header nav > button:hover {
+  background-color: #F9F9F9;
+  color: #0F1624;
 }
 header nav #offcanvas {
   position: fixed;
@@ -130,6 +140,32 @@ header nav #offcanvas ul li:first-child button {
 }
 header nav #offcanvas ul li a {
   color: #F9F9F9;
+}
+header nav #offcanvas ul li a:hover {
+  text-decoration: underline;
+}
+@media only screen and (min-width: 1025px) {
+  header {
+    height: 64px;
+  }
+  header nav {
+    height: 64px;
+  }
+  header nav > button {
+    margin-right: 42px;
+    height: 42px;
+    width: 42px;
+    font-size: 32px;
+  }
+  header nav > ul {
+    margin-left: 42px;
+  }
+  header nav > ul li {
+    height: 48px;
+  }
+  header nav > ul li a {
+    top: 32%;
+  }
 }
 
 footer {
@@ -228,7 +264,7 @@ footer a:hover {
   width: 100%;
   height: 230px;
 }
-@media only screen and (min-width: 834px) {
+@media only screen and (min-width: 834px) and (max-width: 1024px) {
   .image-background {
     height: 600px;
   }
@@ -237,6 +273,17 @@ footer a:hover {
   }
   .image-background div {
     height: 600px;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .image-background {
+    height: 800px;
+  }
+  .image-background img {
+    height: 800px;
+  }
+  .image-background div {
+    height: 800px;
   }
 }
 
@@ -269,6 +316,7 @@ footer a:hover {
   border-radius: 0px 32px 32px 0px;
   box-shadow: 1px 2px 2px 0px rgba(249, 249, 249, 0.25);
   border: none;
+  cursor: pointer;
 }
 .search form:first-child button.seek i {
   font-size: 16px;
@@ -281,6 +329,16 @@ footer a:hover {
   outline: none;
   transition: all 0.3s;
 }
+@media only screen and (min-width: 834px) {
+  .search form:first-child input {
+    width: 200px;
+    height: 32px;
+  }
+  .search form:first-child button.seek {
+    width: 48px;
+    height: 32px;
+  }
+}
 
 .search form:last-child button.tag_search {
   display: inline-block;
@@ -292,11 +350,25 @@ footer a:hover {
   padding: 4px 12px;
   color: #F9F9F9;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
 .search form:last-child button.tag_search span {
   text-align: start;
   display: inline-block;
   width: max-content;
+}
+.search form:last-child button.tag_search:hover {
+  background-color: #5d5186;
+  box-shadow: 1px 1px 2px 0px rgba(249, 249, 249, 0.25);
+}
+.search form:last-child button.tag_search:active {
+  background-color: #1b1727;
+}
+@media only screen and (min-width: 1025px) {
+  .search form:last-child button.tag_search {
+    margin-top: 8px;
+    height: 32px;
+  }
 }
 
 form.formButtons {
@@ -315,13 +387,13 @@ form.formButtons button {
   scroll-snap-align: center;
 }
 
-.posts {
+section.posts {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
 }
-.posts article {
+section.posts article {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -334,8 +406,16 @@ form.formButtons button {
   color: #F9F9F9;
   box-shadow: 1px 2px 4px 0px rgba(249, 249, 249, 0.25);
   margin: 42px auto;
+  transition: all 0.3s ease;
 }
-.posts article img {
+section.posts article:hover {
+  transform: scale(1.05) translate(0px, -8px); /* Puedes ajustar el valor para cambiar la escala */
+  box-shadow: 2px 4px 8px 0px rgba(249, 249, 249, 0.5);
+}
+section.posts article strong {
+  margin: 12px 4px;
+}
+section.posts article img {
   width: 200px;
   height: 136px;
   object-fit: cover;
@@ -345,75 +425,74 @@ form.formButtons button {
   border-radius: 4px;
   margin-top: 12px;
 }
-.posts article p {
+section.posts article p {
   text-align: start;
   margin: 0px 12px;
   font-size: 0.8rem;
 }
-.posts article div {
+section.posts article div {
   display: grid;
   width: 100%;
 }
-.posts article div.all_options {
+section.posts article div.all_options {
   grid-template-columns: 1fr 1fr;
   grid-row: 1fr 1fr;
   grid-template-areas: "view view" "edit delete";
   gap: 8px;
   justify-items: center;
 }
-.posts article div.all_options a:first-child {
+section.posts article div.all_options a:first-child {
   grid-area: view;
 }
-.posts article div.all_options a:nth-child(2) {
+section.posts article div.all_options a:nth-child(2) {
   grid-area: edit;
   background-color: #BD83B8;
   margin-right: 4px;
 }
-.posts article div.all_options a:last-child {
+section.posts article div.all_options a:last-child {
   grid-area: delete;
   background-color: #CA0000;
   margin-left: 4px;
 }
-.posts article div.all_options a:nth-child(2), .posts article div.all_options a:last-child {
+section.posts article div.all_options a:nth-child(2), section.posts article div.all_options a:last-child {
   border-radius: 50%;
   width: 32px;
   height: 32px;
   padding: 8px;
   transition: all 0.8s ease-in-out;
 }
-.posts article div.all_options a:nth-child(2) i, .posts article div.all_options a:last-child i {
+section.posts article div.all_options a:nth-child(2) i, section.posts article div.all_options a:last-child i {
   font-size: 16px;
 }
-.posts article div.view {
+section.posts article div.view {
   place-content: center;
 }
-.posts article div a {
+section.posts article div a {
   display: grid;
   place-content: center;
   margin: 4px auto;
 }
-.posts article div a:first-child {
+section.posts article div a:first-child {
   border-radius: 32px;
   background: linear-gradient(90deg, #473E66 0%, #BD83B8 100%);
   padding: 8px 16px;
-  transition: all 0.8s ease-in-out;
   width: 155px;
   height: 32px;
 }
-.posts article div a:first-child:hover {
-  background: linear-gradient(90deg, #BD83B8 0%, #473E66 100%);
+section.posts article div a:first-child:hover {
+  background: #473E66;
 }
-.posts article div a:first-child:active {
-  background: linear-gradient(90deg, #BD83B8 0%, #473E66 100%);
+section.posts article div a:first-child:active {
+  background: #473E66;
 }
 @media only screen and (min-width: 834px) {
-  .posts {
+  section.posts {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
   }
-  .posts article {
-    margin: 42px 12px;
+  section.posts article {
+    margin: 42px 72px;
   }
 }
 
@@ -490,6 +569,9 @@ main.detailPost .postContent > div:first-child p {
   font-family: "Poppins";
   font-style: italic;
 }
+main.detailPost .postContent > div:first-child span {
+  text-decoration: underline;
+}
 main.detailPost .postContent hr {
   width: 90%;
   margin: 12px auto 32px auto;
@@ -514,6 +596,78 @@ main.detailPost .postContent article ul {
 }
 main.detailPost .postContent article ul li {
   margin: 12px 0;
+}
+@media only screen and (min-width: 834px) and (max-width: 1024px) {
+  main.detailPost .postContent > div:first-child {
+    margin: 42px 64px;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  main.detailPost .postContent > div:first-child h2 {
+    font-size: 2.4rem;
+  }
+  main.detailPost .postContent > div:first-child p {
+    font-size: 1.2rem;
+  }
+  main.detailPost .postContent hr {
+    width: 80%;
+    margin: 32px auto;
+  }
+  main.detailPost .postContent article {
+    margin: 42px;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  main.detailPost .postContent article img {
+    width: 80%;
+  }
+  main.detailPost .postContent article p {
+    font-size: 1.2rem;
+    margin-left: 0px;
+    margin-right: auto;
+  }
+  main.detailPost .postContent article ul {
+    margin: 24px 42px;
+  }
+  main.detailPost .postContent article ul li {
+    margin: 12px 0;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  main.detailPost .postContent > div:first-child {
+    margin: 42px 128px;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  main.detailPost .postContent > div:first-child h2 {
+    font-size: 2.4rem;
+  }
+  main.detailPost .postContent > div:first-child p {
+    font-size: 1.2rem;
+  }
+  main.detailPost .postContent hr {
+    width: 80%;
+    margin: 32px auto;
+  }
+  main.detailPost .postContent article {
+    margin: 42px 128px;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  main.detailPost .postContent article img {
+    width: 80%;
+  }
+  main.detailPost .postContent article p {
+    font-size: 1.2rem;
+    margin-left: 0px;
+    margin-right: auto;
+  }
+  main.detailPost .postContent article ul {
+    margin: 24px 42px;
+  }
+  main.detailPost .postContent article ul li {
+    margin: 12px 0;
+  }
 }
 
 section.navigation {

@@ -25,6 +25,7 @@
             border-radius: 0px 32px 32px 0px;
             box-shadow: 1px 2px 2px 0px rgba(249, 249, 249, 0.25);
             border: none;
+            cursor: pointer;
             i{
                 font-size: 16px;
                 filter: drop-shadow(1px 2px 2px rgba(0, 0, 0, 0.25));
@@ -36,6 +37,17 @@
         input,button.seek{
             outline: none;
             transition: all .3s;
+        }
+        @media only screen and (min-width:834px){
+            input{
+                width: 200px;
+                height: 32px;
+            }
+            button.seek{
+                width: 48px;
+                height: 32px;
+            }
+
         }
     }
 }

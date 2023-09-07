@@ -10,10 +10,22 @@
             padding: 4px 12px;
             color: $white;
             cursor: pointer;
+            transition: all 0.2s ease-in-out;
             span{
                 text-align: start;
                 display: inline-block;
                 width: max-content;
+            }
+            &:hover{
+                background-color: $violet-hover;
+                box-shadow: 1px 1px 2px 0px rgba(249, 249, 249, 0.25);
+            }
+            &:active{
+                background-color: $violet-active;
+            }
+            @media only screen and (min-width: 1025px){
+                margin-top: 8px;
+                height: 32px;
             }
         }
     }
