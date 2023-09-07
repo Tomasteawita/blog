@@ -22,3 +22,4 @@ docker exec -it web-app sh
 python manage.py runserver 0.0.0.0:8000
 ```
 * Finalmente abrimos en el navegador con la dirección `127.0.0.1:8000`
+.
