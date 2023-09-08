@@ -28,18 +28,18 @@ SECRET_KEY = secrets.token_hex(32)
 #SECRET_KEY = 'django-insecure-!c2yxqv(0r=k!laty#7y7k=0d$!$v_jrvkw2l4#o!50&#az_16'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 #SESSION_COOKIE_SECURE = True
 #CSRF_COOKIE_SECURE = True
-#CRSF_TRUSTED_ORIGINS = ['https://tomasteawita.com', 'https://www.tomasteawita.com']
+CRSF_TRUSTED_ORIGINS = ['http://tomasteawita.com', 'http://www.tomasteawita.com']
 #SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 #SECURE_HSTS_PRELOAD = True
 
 
 #SECURE_HSTS_SECONDS = 31536000
 #SECURE_SSL_REDIRECT = True
-#ALLOWED_HOSTS = ['tomasteawita.com', 'www.tomasteawita.com', 'localhost', '62.72.24.205']
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['tomasteawita.com', 'www.tomasteawita.com', 'localhost', '62.72.24.205']
+#ALLOWED_HOSTS = ['*']
 
 # Application definition
 
