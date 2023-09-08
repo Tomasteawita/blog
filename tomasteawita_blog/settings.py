@@ -28,17 +28,18 @@ SECRET_KEY = secrets.token_hex(32)
 #SECRET_KEY = 'django-insecure-!c2yxqv(0r=k!laty#7y7k=0d$!$v_jrvkw2l4#o!50&#az_16'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
-SECURE_HSTS_INCLUDE_SUBDOMAINS = True
-SECURE_HSTS_PRELOAD = True
+DEBUG = True
+#SESSION_COOKIE_SECURE = True
+#CSRF_COOKIE_SECURE = True
+#CRSF_TRUSTED_ORIGINS = ['https://tomasteawita.com', 'https://www.tomasteawita.com']
+#SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+#SECURE_HSTS_PRELOAD = True
 
 
-SECURE_HSTS_SECONDS = 31536000
-SECURE_SSL_REDIRECT = True
+#SECURE_HSTS_SECONDS = 31536000
+#SECURE_SSL_REDIRECT = True
+#ALLOWED_HOSTS = ['tomasteawita.com', 'www.tomasteawita.com', 'localhost', '62.72.24.205']
 ALLOWED_HOSTS = ['*']
-
 
 # Application definition
 
@@ -64,6 +65,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    
 ]
 
 ROOT_URLCONF = 'tomasteawita_blog.urls'
@@ -123,7 +125,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-ar'
 
 TIME_ZONE = 'UTC'
 
@@ -135,15 +137,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
-# STATIC_ROOT =  os.path.join(BASE_DIR, 'static/')
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "blog/static"),
-)
-
-MEDIA_URL = 'media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
