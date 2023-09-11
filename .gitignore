@@ -2,3 +2,4 @@ __pycache__/
 postgres_data/
 .env
 migrations/
+media/

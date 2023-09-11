@@ -28,7 +28,8 @@ SECRET_KEY = secrets.token_hex(32)
 #SECRET_KEY = 'django-insecure-!c2yxqv(0r=k!laty#7y7k=0d$!$v_jrvkw2l4#o!50&#az_16'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
+#DEBUG = False
 #SESSION_COOKIE_SECURE = True
 #CSRF_COOKIE_SECURE = True
 CRSF_TRUSTED_ORIGINS = ['http://tomasteawita.com', 'http://www.tomasteawita.com']
