@@ -30,9 +30,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = secrets.token_hex(32)
 
-#SECRET_KEY = 'django-insecure-!c2yxqv(0r=k!laty#7y7k=0d$!$v_jrvkw2l4#o!50&#az_16'
-
-# SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = True
 DEBUG = False
 #SESSION_COOKIE_SECURE = True
@@ -169,24 +166,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CKEDITOR_UPLOAD_PATH = "ckeditor_uploads/"
 CKEDITOR_BASEPATH = "/static/ckeditor/ckeditor/"
 
-
 CKEDITOR_CONFIGS = {
     'default': {
-        'toolbar': 'Full',
-        'width': 800,
+        'toolbar': 'full',
         'height': 300,
-        'extraPlugins': ','.join([
-            'a11yhelp', 'dialog', 'dialogui', 'richcombo', 'dialogadvtab', 'image2', 'link', 'liststyle',
-            'magicline', 'about', 'basicstyles', 'bidi', 'blockquote', 'clipboard', 'colorbutton', 'colordialog',
-            'contextmenu', 'elementspath', 'enterkey', 'entities', 'filebrowser', 'find', 'floatingspace',
-            'format', 'horizontalrule', 'htmlwriter', 'image', 'indent', 'indentblock', 'indentlist', 'justify',
-            'lineutils', 'list', 'listblock', 'maximize', 'newpage', 'pagebreak', 'pastefromword', 'pastetext',
-            'preview', 'print', 'removeformat', 'resize', 'save', 'scayt', 'showblocks', 'showborders',
-            'sourcearea', 'specialchar', 'tab', 'table', 'tabletools', 'templates', 'toolbar', 'undo', 'wsc'
-        ]),
-        'allowedContent': True,
-        'filebrowserWindowWidth': 800,
-        'filebrowserWindowHeight': 500,
+        'width': '100%',
     },
 }
 
