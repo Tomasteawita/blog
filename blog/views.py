@@ -15,7 +15,7 @@ class IndexView(View):
     Attributes:
         template_name (str): El nombre de la plantilla HTML a utilizar para renderizar la página.
 
-    Methods:
+    Method:
         get(self, request): Procesa una solicitud GET para mostrar la página de inicio.
     """
     template_name = 'index.html'
