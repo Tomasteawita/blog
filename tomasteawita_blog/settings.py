@@ -8,6 +8,11 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
+
+DATABASE
+ALLOWED_HOST
+DEGUB
+CRSF_TRUSTED_ORIGINS
 """
 
 from pathlib import Path
@@ -104,6 +109,18 @@ DATABASES = {
     }
 }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'postgres',
+#         'USER': 'postgres',
+#         'PASSWORD': 'postgres!',
+#         'HOST': 'postgre_db',
+#         'PORT': '5435'
+#     }
+# }
+
+
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
@@ -155,15 +172,23 @@ CKEDITOR_BASEPATH = "/static/ckeditor/ckeditor/"
 
 CKEDITOR_CONFIGS = {
     'default': {
-        'toolbar': 'Custom',
-        'toolbar_Custom': [
-            ['Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript'],
-            ['NumberedList', 'BulletedList', 'Blockquote', 'Image', 'Link'],
-            ['RemoveFormat', 'Source'],
-        ],
+        'toolbar': 'Full',
         'width': 800,
         'height': 300,
+        'extraPlugins': ','.join([
+            'a11yhelp', 'dialog', 'dialogui', 'richcombo', 'dialogadvtab', 'image2', 'link', 'liststyle',
+            'magicline', 'about', 'basicstyles', 'bidi', 'blockquote', 'clipboard', 'colorbutton', 'colordialog',
+            'contextmenu', 'elementspath', 'enterkey', 'entities', 'filebrowser', 'find', 'floatingspace',
+            'format', 'horizontalrule', 'htmlwriter', 'image', 'indent', 'indentblock', 'indentlist', 'justify',
+            'lineutils', 'list', 'listblock', 'maximize', 'newpage', 'pagebreak', 'pastefromword', 'pastetext',
+            'preview', 'print', 'removeformat', 'resize', 'save', 'scayt', 'showblocks', 'showborders',
+            'sourcearea', 'specialchar', 'tab', 'table', 'tabletools', 'templates', 'toolbar', 'undo', 'wsc'
+        ]),
+        'allowedContent': True,
+        'filebrowserWindowWidth': 800,
+        'filebrowserWindowHeight': 500,
     },
 }
+
 
 CKEDITOR_FILENAME_GENERATOR = 'utils.get_filename'
