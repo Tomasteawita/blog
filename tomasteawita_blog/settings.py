@@ -34,7 +34,7 @@ SECRET_KEY = secrets.token_hex(32)
 DEBUG = False
 #SESSION_COOKIE_SECURE = True
 #CSRF_COOKIE_SECURE = True
-CRSF_TRUSTED_ORIGINS = ['http://tomasteawita.com', 'http://www.tomasteawita.com']
+CRSF_TRUSTED_ORIGINS = ['https://tomasteawita.com', 'https://www.tomasteawita.com']
 #SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 #SECURE_HSTS_PRELOAD = True
 
