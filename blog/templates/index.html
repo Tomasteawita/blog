@@ -1,12 +1,12 @@
 {% extends 'base/base.html' %}
 {% load static %}
 {% block meta %}
-<meta name="description" content="Tomasteawita es un blog de tecnología, donde se publican artículos sobre programación, desarrollo web, desarrollo móvil, diseño web, diseño gráfico, marketing digital, SEO, SEM, SMM, y mucho más.">
-<meta name="keywords" content="tomasteawita, blog, tecnología, programación, desarrollo web, desarrollo móvil, diseño web, diseño gráfico, marketing digital, SEO, SEM, SMM">
+<meta name="description" content="Tomasteawita es un blog para emprendedores del deporte, donde se publican artículos sobre programación y análisis de datos aplicado a negocios y emprendimientos de profesionales del deporte con el objetivo de potenciar el crecimiento de su actividad.">
+<meta name="keywords" content="tomasteawita, Tomas Cueva, blog, tecnología, programación, desarrollo web, desarrollo de software, desarrollo de software fitness, servicio digital, paginasa web, negocios, emprendimientos, analisis de datos">
 <meta name="author" content="Tomasteawita">
 <meta property="og:title" content="Tomasteawita | blog">
-<meta property="og:description" content="Tomasteawita es un blog de tecnología, donde se publican artículos sobre programación, desarrollo web, desarrollo móvil, diseño web, diseño gráfico, marketing digital, SEO, SEM, SMM, y mucho más.">
-<meta property="og:image" content="{% static 'img/logo.png' %}">
+<meta property="og:description" content="Tomasteawita es un blog para emprendedores del deporte, donde se publican artículos sobre programación y análisis de datos aplicado a negocios y emprendimientos de profesionales del deporte con el objetivo de potenciar el crecimiento de su actividad.">
+<meta property="og:image" content="{% static 'imges/tomasteawita.png' %}">
 <meta property="og:url" content="https://tomasteawita.com">
 <meta property="og:site_name" content="Tomasteawita">
 <meta property="og:locale" content="es_ES">
@@ -19,7 +19,37 @@
 {% block main %}
 <main>
     {% include 'index/image-background.html' %}
+    {% include 'index/h1.html' %}
     {% include 'index/search.html' %}
     {% include 'index/posts.html' %}
+    <div id="load-page">
+        <div class="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+      </div> 
 </main>
 {% endblock main %}
+{% block scripts %}
+<script>
+    const loading = document.querySelector('#load-page');
+    const backgroundImage = new Image();
+
+    backgroundImage.src = "{% static 'images/tomasteawita.png' %}";
+
+    backgroundImage.onload = function() {
+        // Inicia el proceso de desvanecimiento
+        fadeOut(loading);
+    };
+
+    function fadeOut(element) {
+        let opacity = 1;
+        const fadeInterval = setInterval(function() {
+            opacity -= 0.05; // Puedes ajustar la velocidad de desvanecimiento cambiando este valor
+            element.style.opacity = opacity;
+            if (opacity <= 0) {
+                clearInterval(fadeInterval);
+                element.style.display = 'none'; // Oculta el elemento después del desvanecimiento
+            }
+        }, 50); // El tiempo entre cada paso del desvanecimiento (en milisegundos)
+    }
+
+</script>
+{% endblock scripts %}
