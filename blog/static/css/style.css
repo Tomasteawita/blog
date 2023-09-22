@@ -1,7 +1,17 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,600;0,700;0,900;1,100;1,400;1,600;1,700;1,900&display=swap");
-h1, h2, h3, h4, h5, h6, p, strong, span, a, li, ul, ol, button {
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, button {
   font-family: "Poppins", sans-serif;
+  color: #202528;
+}
+
+p, strong, span, a, li, ul, ol {
+  font-family: "Montserrat", sans-serif;
 }
 
 h1 {
@@ -35,18 +45,16 @@ h6 {
 
 p {
   font-size: 1rem;
-}
-
-a {
-  text-decoration: none;
-  color: #F9F9F9;
+  color: #202528;
 }
 
 header {
   display: block;
-  background: linear-gradient(180deg, #0F1624 20%, rgba(15, 22, 36, 0) 100%);
+  background: #7952B3;
   height: 48px;
   position: fixed;
+  top: 0px;
+  left: 0px;
   width: 100%;
   z-index: 100;
 }
@@ -78,6 +86,7 @@ header nav > ul li a {
   top: 28%;
   left: 0px;
   transition: all 0.3s;
+  color: #ffffff;
 }
 header nav > ul li a:hover {
   text-decoration: underline;
@@ -90,19 +99,19 @@ header nav > ul li a:hover {
 header nav > button {
   border-radius: 8px;
   background-color: transparent;
-  border: 2px solid #F9F9F9;
+  border: 2px solid #ffffff;
   cursor: pointer;
   height: 32px;
   font-size: 24px;
-  color: #F9F9F9;
+  color: #ffffff;
   display: grid;
   place-content: center;
   padding: 2px 4px 0px 4px;
   transition: all 0.3s;
 }
 header nav > button:hover {
-  background-color: #F9F9F9;
-  color: #0F1624;
+  background-color: #ffffff;
+  color: #7952B3;
 }
 header nav #offcanvas {
   position: fixed;
@@ -110,7 +119,7 @@ header nav #offcanvas {
   right: -300px;
   width: 300px;
   height: 100vh;
-  background-color: #0F1624;
+  background-color: #7952B3;
   box-shadow: -3px 0px 10px rgba(0, 0, 0, 0.2);
   transition: right 0.3s ease-in-out;
   z-index: 1000;
@@ -133,10 +142,10 @@ header nav #offcanvas ul li:first-child button {
   font-size: 20px;
   cursor: pointer;
   margin-top: 32px;
-  color: #F9F9F9;
+  color: #ffffff;
 }
 header nav #offcanvas ul li a {
-  color: #F9F9F9;
+  color: #ffffff;
 }
 header nav #offcanvas ul li a:hover {
   text-decoration: underline;
@@ -166,8 +175,8 @@ header nav #offcanvas ul li a:hover {
 }
 
 footer {
-  background-color: #473E66;
-  color: #F9F9F9;
+  background-color: #F9F8FA;
+  color: #202528;
   padding: 20px;
   text-align: center;
   font-size: 14px;
@@ -237,7 +246,7 @@ footer nav ul li i {
   }
 }
 footer a {
-  color: #F9F9F9;
+  color: #202528;
   text-decoration: none;
 }
 footer a:hover {
@@ -257,7 +266,7 @@ footer a:hover {
   position: absolute;
   top: 0px;
   left: 0px;
-  background: rgba(15, 22, 36, 0.5);
+  background: transparent;
   width: 100%;
   height: 230px;
 }
@@ -274,13 +283,13 @@ footer a:hover {
 }
 @media only screen and (min-width: 1025px) {
   .image-background {
-    height: 800px;
+    height: 700px;
   }
   .image-background img {
-    height: 800px;
+    height: 700px;
   }
   .image-background div {
-    height: 800px;
+    height: 700px;
   }
 }
 
@@ -296,41 +305,50 @@ footer a:hover {
   align-items: center;
   justify-content: center;
 }
-.search form:first-child input {
-  background-color: transparent;
-  background-color: #F9F9F9;
-  width: 153px;
-  height: 24px;
-  border-radius: 32px 0px 0px 32px;
-  box-shadow: 1px 2px 2px 0px rgba(249, 249, 249, 0.25);
-  border: none;
-  padding: 4px 12px;
-}
-.search form:first-child button.seek {
-  background-color: #F9F9F9;
-  width: 32px;
-  height: 24px;
-  border-radius: 0px 32px 32px 0px;
-  box-shadow: 1px 2px 2px 0px rgba(249, 249, 249, 0.25);
-  border: none;
-  cursor: pointer;
-}
-.search form:first-child button.seek i {
-  font-size: 16px;
-  filter: drop-shadow(1px 2px 2px rgba(0, 0, 0, 0.25));
-  position: relative;
-  top: 1px;
-  left: 1px;
-}
 .search form:first-child input, .search form:first-child button.seek {
+  background-color: #F9F8FA;
+  border-radius: 32px 0px 0px 32px;
+  box-shadow: 1px 2px 4px 0px rgba(15, 22, 36, 0.25);
+  border: 1px solid #d3cbda;
+  padding: 4px 12px;
   outline: none;
   transition: all 0.3s;
+}
+.search form:first-child input:focus, .search form:first-child button.seek:focus {
+  background-color: #ffffff;
+  border: 1px solid #7952B3;
+}
+.search form:first-child input {
+  width: 153px;
+  height: 24px;
 }
 @media only screen and (min-width: 834px) {
   .search form:first-child input {
     width: 200px;
     height: 32px;
   }
+}
+.search form:first-child button.seek {
+  width: 32px;
+  height: 24px;
+  border-radius: 0px 32px 32px 0px;
+  cursor: pointer;
+}
+.search form:first-child button.seek:hover {
+  background-color: #ffffff;
+  border: 1px solid #7952B3;
+}
+.search form:first-child button.seek:hover i {
+  color: #7952B3;
+}
+.search form:first-child button.seek i {
+  font-size: 16px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  position: relative;
+  top: 1px;
+  left: 1px;
+}
+@media only screen and (min-width: 834px) {
   .search form:first-child button.seek {
     width: 48px;
     height: 32px;
@@ -339,13 +357,12 @@ footer a:hover {
 
 .search form:last-child button.tag_search {
   display: inline-block;
-  background-color: #473E66;
+  background-color: #F9F8FA;
   height: 24px;
   border-radius: 32px;
-  box-shadow: 1px 1px 2px 0px rgba(249, 249, 249, 0.25);
-  border: none;
+  border: 1px solid #d3cbda;
   padding: 4px 12px;
-  color: #F9F9F9;
+  color: #202528;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
@@ -355,11 +372,11 @@ footer a:hover {
   width: max-content;
 }
 .search form:last-child button.tag_search:hover {
-  background-color: #5d5186;
-  box-shadow: 1px 1px 2px 0px rgba(249, 249, 249, 0.25);
+  background-color: #F1E9FE;
+  box-shadow: 1px 2px 4px 0px rgba(15, 22, 36, 0.25);
 }
 .search form:last-child button.tag_search:active {
-  background-color: #1b1727;
+  background-color: #F9F8FA;
 }
 @media only screen and (min-width: 1025px) {
   .search form:last-child button.tag_search {
@@ -394,34 +411,33 @@ section.posts article {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   text-align: center;
-  width: 275px;
+  min-width: 286px;
+  max-width: 300px;
   height: 382px;
   border-radius: 4px;
-  border: 0.25px solid #F9F9F9;
-  color: #F9F9F9;
-  box-shadow: 1px 2px 4px 0px rgba(249, 249, 249, 0.25);
+  border: 1px solid #d3cbda;
+  color: #202528;
   margin: 42px auto;
   transition: all 0.3s ease;
 }
 section.posts article:hover {
   transform: scale(1.05) translate(0px, -8px); /* Puedes ajustar el valor para cambiar la escala */
-  box-shadow: 2px 4px 8px 0px rgba(249, 249, 249, 0.5);
+  box-shadow: 1px 2px 4px 0px rgba(15, 22, 36, 0.25);
 }
 section.posts article strong {
   margin: 12px 16px 4px 24px;
   text-align: start;
 }
 section.posts article img {
-  width: 226px;
-  height: 136px;
+  width: 100%;
+  height: 180px;
   object-fit: cover;
   position: relative;
   top: 0px;
   left: 0px;
-  border-radius: 4px;
-  margin-top: 12px;
+  border-radius: 4px 4px 0px 0px;
 }
 section.posts article p {
   text-align: start;
@@ -444,7 +460,7 @@ section.posts article div.all_options a:first-child {
 }
 section.posts article div.all_options a:nth-child(2) {
   grid-area: edit;
-  background-color: #BD83B8;
+  background-color: #F1E9FE;
   margin-right: 4px;
 }
 section.posts article div.all_options a:last-child {
@@ -472,16 +488,17 @@ section.posts article div a {
 }
 section.posts article div a:first-child {
   border-radius: 32px;
-  background: linear-gradient(90deg, #473E66 0%, #BD83B8 100%);
+  background: #F1E9FE;
   padding: 8px 16px;
   width: 155px;
   height: 32px;
 }
 section.posts article div a:first-child:hover {
-  background: #473E66;
+  background: #c2a0fb;
 }
 section.posts article div a:first-child:active {
-  background: #473E66;
+  background: #7952B3;
+  color: #ffffff;
 }
 @media only screen and (min-width: 834px) {
   section.posts {
@@ -511,7 +528,7 @@ main.create-update section.form-ckeditor form ul {
 main.create-update section.form-ckeditor form input {
   width: 90%;
   margin-bottom: 24px;
-  background-color: #F9F9F9;
+  background-color: #ffffff;
   border-radius: 12px;
   padding: 4px 12px;
   border: none;
@@ -523,18 +540,18 @@ main.create-update section.form-ckeditor form textarea {
 main.create-update section.form-ckeditor form button {
   width: 128px;
   margin-bottom: 24px;
-  background-color: #473E66;
+  background-color: #7952B3;
   border-radius: 12px;
   padding: 4px 12px;
   border: none;
-  color: #F9F9F9;
+  color: #ffffff;
   cursor: pointer;
 }
 main.create-update section.form-ckeditor form button:hover {
-  background-color: #5d5186;
+  background-color: #9475c3;
 }
 main.create-update section.form-ckeditor form button:active {
-  background-color: #1b1727;
+  background-color: #49316e;
 }
 main.create-update section.form-ckeditor form li {
   margin: 42px auto;
@@ -543,19 +560,19 @@ main.create-update section.form-ckeditor form li label, main.create-update secti
   margin-left: 12px;
 }
 main.create-update section.form-ckeditor form li label {
-  color: #F9F9F9;
+  color: #ffffff;
 }
 
 main.detailPost {
   text-align: start;
 }
 main.detailPost .postContent {
-  color: #F9F9F9;
+  color: #ffffff;
 }
 main.detailPost .postContent > div:first-child {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   justify-content: center;
   margin: 21px;
 }
@@ -563,21 +580,24 @@ main.detailPost .postContent > div:first-child h2 {
   font-size: 1.2rem;
   font-weight: 400;
   margin-bottom: 1rem;
+  text-align: start;
 }
 main.detailPost .postContent > div:first-child h3 {
   font-size: 1.1rem;
   font-weight: 200;
   margin-bottom: 1rem;
+  text-align: start;
 }
 main.detailPost .postContent > div:first-child p {
   font-weight: 400;
   margin-bottom: 1rem;
   font-family: "Poppins";
   font-style: italic;
-  color: lightgray;
+  color: gray;
 }
 main.detailPost .postContent > div:first-child span {
   text-decoration: underline;
+  color: #373f44;
 }
 main.detailPost .postContent hr {
   width: 90%;
@@ -597,16 +617,19 @@ main.detailPost .postContent article img {
 }
 main.detailPost .postContent article p {
   margin: 12px auto;
-  line-height: 1.5rem;
+  line-height: 28px;
+  font-size: 16px;
 }
 main.detailPost .postContent article ul, main.detailPost .postContent article ol {
   margin: 12px 24px;
 }
 main.detailPost .postContent article ul li, main.detailPost .postContent article ol li {
   margin: 12px 0;
+  line-height: 24px;
 }
 main.detailPost .postContent article h2, main.detailPost .postContent article h3 {
-  margin: 42px auto 12px auto;
+  margin: 42px auto 12px 0px;
+  text-align: start;
 }
 @media only screen and (min-width: 834px) and (max-width: 1024px) {
   main.detailPost .postContent > div:first-child {
@@ -618,7 +641,7 @@ main.detailPost .postContent article h2, main.detailPost .postContent article h3
     font-size: 2.4rem;
   }
   main.detailPost .postContent > div:first-child p {
-    font-size: 1.2rem;
+    font-size: 16px;
   }
   main.detailPost .postContent hr {
     width: 80%;
@@ -633,7 +656,7 @@ main.detailPost .postContent article h2, main.detailPost .postContent article h3
     width: 80%;
   }
   main.detailPost .postContent article p {
-    font-size: 1.2rem;
+    font-size: 16px;
     margin-left: 0px;
     margin-right: auto;
   }
@@ -654,7 +677,7 @@ main.detailPost .postContent article h2, main.detailPost .postContent article h3
     font-size: 2.4rem;
   }
   main.detailPost .postContent > div:first-child p {
-    font-size: 1.2rem;
+    font-size: 16px;
   }
   main.detailPost .postContent hr {
     width: 80%;
@@ -672,7 +695,7 @@ main.detailPost .postContent article h2, main.detailPost .postContent article h3
     font-size: 1.6rem;
   }
   main.detailPost .postContent article p {
-    font-size: 1.2rem;
+    font-size: 16px;
     margin-left: 0px;
     margin-right: auto;
   }
@@ -685,7 +708,7 @@ main.detailPost .postContent article h2, main.detailPost .postContent article h3
 }
 
 section.navigation {
-  background-color: #473E66;
+  background-color: #7952B3;
   display: grid;
   place-content: center;
   height: 100px;
@@ -699,7 +722,7 @@ section.navigation div h2 {
   display: inline-block;
   font-size: 18px;
   font-weight: 700;
-  color: #F9F9F9;
+  color: #ffffff;
 }
 section.navigation nav {
   display: flex;
@@ -714,10 +737,10 @@ section.navigation nav a:hover {
   text-decoration: underline;
 }
 section.navigation nav a:active {
-  color: #1b1727;
+  color: #49316e;
 }
 section.navigation nav span {
-  color: #F9F9F9;
+  color: #ffffff;
   margin: 8px;
 }
 
@@ -731,8 +754,8 @@ main.cards-transition form {
   place-content: center;
   gap: 24px;
   width: 300px;
-  color: #F9F9F9;
-  border: 1px solid #F9F9F9;
+  color: #ffffff;
+  border: 1px solid #ffffff;
   border-radius: 8px;
   padding: 32px 4px;
 }
@@ -746,17 +769,17 @@ main.cards-transition form div.options-buttons {
 }
 main.cards-transition form div.options-buttons a {
   text-decoration: none;
-  color: #F9F9F9;
+  color: #ffffff;
   font-size: 1.2rem;
   font-weight: 600;
   padding: 8px 16px;
   border-radius: 8px;
   transition: all 0.3s ease-in-out;
-  border: 1px solid #F9F9F9;
-  background-color: #473E66;
+  border: 1px solid #ffffff;
+  background-color: #7952B3;
 }
 main.cards-transition form div.options-buttons a:hover {
-  background-color: #473E66;
+  background-color: #7952B3;
 }
 main.cards-transition form div.options-buttons button {
   font-size: 1.2rem;
@@ -764,12 +787,12 @@ main.cards-transition form div.options-buttons button {
   padding: 8px 16px;
   border-radius: 8px;
   transition: all 0.3s ease-in-out;
-  border: 1px solid #F9F9F9;
+  border: 1px solid #ffffff;
   background-color: #CA0000;
-  color: #F9F9F9;
+  color: #ffffff;
 }
 main.cards-transition form div.options-buttons button:hover {
-  background-color: #473E66;
+  background-color: #7952B3;
 }
 main.cards-transition form div.confirm p {
   text-align: center;
@@ -778,7 +801,12 @@ main.cards-transition form div.confirm p {
 section.welcome-message {
   display: grid;
   place-content: center;
-  color: #F9F9F9;
+  color: #202528;
+}
+@media only screen and (max-width: 768px) {
+  section.welcome-message h1 {
+    font-size: 1.6rem;
+  }
 }
 
 #load-page {
@@ -788,7 +816,7 @@ section.welcome-message {
   height: 100vh;
   width: 100%;
   z-index: 100;
-  background-color: #473E66;
+  background-color: #F1E9FE;
   display: grid;
   place-content: center;
   opacity: 1; /* Establece la opacidad inicial en 1 (completamente visible) */
@@ -806,7 +834,7 @@ section.welcome-message {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background: #0F1624;
+  background: #7952B3;
   animation: lds-grid 1.2s linear infinite;
 }
 .lds-grid div:nth-child(1) {
@@ -870,11 +898,15 @@ section.welcome-message {
 }
 
 body {
-  background-color: #0F1624;
+  background-color: #ffffff;
 }
 
 section:not(.image-background.read_post) {
   margin-bottom: 24px;
+}
+
+main {
+  margin-top: 32px;
 }
 
 /*# sourceMappingURL=style.css.map */

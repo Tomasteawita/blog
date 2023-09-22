@@ -1,8 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,600;0,700;0,900;1,100;1,400;1,600;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-h1,h2,h3,h4,h5,h6,p,strong,span,a,li,ul,ol,button{
-    font-family: 'Poppins', sans-serif;
+$white:#ffffff;
+$violet:#7952B3;
+$violet-hover:lighten($violet, 10%);
+$violet-active:darken($violet, 20%);
+$ligth-violet:#A693E5;
+$pink:#F1E9FE;
+$white-f9:#F9F9F9;
+$white-silver:#F9F8FA;
+$red:#CA0000;
+$black:#202528;
+$box-shadow: 1px 2px 4px 0px rgba(15, 22, 36, 0.25);
+$filter-icon-shadow: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+a{
+    text-decoration: none;
 }
+
+h1,h2,h3,h4,h5,h6,button{
+    font-family: 'Poppins', sans-serif;
+    color: $black;
+}
+
+p,strong,span,a,li,ul,ol{
+    font-family: 'Montserrat', sans-serif;
+}
+
 h1{
     font-size: 2.5rem;
 }
@@ -28,21 +52,5 @@ h6{
 
 p{
     font-size: 1rem;
+    color:$black;
 }
-
-
-
-$background:#0F1624;
-$violet:#473E66;
-$violet-hover:lighten($violet, 10%);
-$violet-active:darken($violet, 20%);
-$ligth-violet:#A693E5;
-$pink:#BD83B8;
-$white:#F9F9F9;
-$red:#CA0000;
-
-a{
-    text-decoration: none;
-    color: $white;
-}
-

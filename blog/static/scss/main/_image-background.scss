@@ -10,7 +10,7 @@
         position: absolute;
         top: 0px;
         left: 0px;
-        background: rgba(15, 22, 36, 0.50);
+        background: transparent;
         width: 100%;
         height: 230px;
     }
@@ -24,12 +24,12 @@
         }
     }
     @media only screen and (min-width:1025px){
-        height: 800px;
+        height: 700px;
         img{
-            height: 800px;
+            height: 700px;
         }
         div{
-            height: 800px;
+            height: 700px;
         }
     }
 }

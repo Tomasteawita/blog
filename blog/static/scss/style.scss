@@ -21,9 +21,13 @@
 
 
 body{
-    background-color: $background
+    background-color: $white
 }
 
 section:not(.image-background.read_post){
     margin-bottom: 24px;
+}
+
+main{
+    margin-top: 32px;
 }

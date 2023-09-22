@@ -30,19 +30,19 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = secrets.token_hex(32)
 
-#DEBUG = True
-DEBUG = False
+DEBUG = True
+#DEBUG = False
 #SESSION_COOKIE_SECURE = True
 #CSRF_COOKIE_SECURE = True
-CRSF_TRUSTED_ORIGINS = ['https://tomasteawita.com', 'https://www.tomasteawita.com']
+#CRSF_TRUSTED_ORIGINS = ['https://tomasteawita.com', 'https://www.tomasteawita.com']
 #SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 #SECURE_HSTS_PRELOAD = True
 
 
 #SECURE_HSTS_SECONDS = 31536000
 #SECURE_SSL_REDIRECT = True
-ALLOWED_HOSTS = ['tomasteawita.com', 'www.tomasteawita.com', 'localhost', '62.72.24.205']
-#ALLOWED_HOSTS = ['*']
+#ALLOWED_HOSTS = ['tomasteawita.com', 'www.tomasteawita.com', 'localhost', '62.72.24.205']
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -92,27 +92,27 @@ TEMPLATES = [
 WSGI_APPLICATION = 'tomasteawita_blog.wsgi.application'
 
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'tomasteawita_blog_db',
+#         'USER': 'tomasteawita',
+#         'PASSWORD': 'TomasteawitaProyecta2002!',
+#         'HOST': 'localhost',
+#         'PORT': '5432'
+#     }
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'tomasteawita_blog_db',
-        'USER': 'tomasteawita',
-        'PASSWORD': 'TomasteawitaProyecta2002!',
-        'HOST': 'localhost',
-        'PORT': '5432'
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'PASSWORD': 'postgres!',
+        'HOST': 'postgre_db',
+        'PORT': '5435'
     }
 }
-
-#$DATABASES = {
-#$    'default': {
-#$        'ENGINE': 'django.db.backends.postgresql',
-#$        'NAME': 'postgres',
-#$        'USER': 'postgres',
-#$        'PASSWORD': 'postgres!',
-#$        'HOST': 'postgre_db',
-#$        'PORT': '5435'
-#$    }
-#$}
 
 
 # Password validation
