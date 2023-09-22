@@ -624,6 +624,7 @@ main.detailPost .postContent article ul, main.detailPost .postContent article ol
   margin: 12px 24px;
 }
 main.detailPost .postContent article ul li, main.detailPost .postContent article ol li {
+  color: #202528;
   margin: 12px 0;
   line-height: 24px;
 }
@@ -664,6 +665,7 @@ main.detailPost .postContent article h2, main.detailPost .postContent article h3
     margin: 24px 42px;
   }
   main.detailPost .postContent article ul li, main.detailPost .postContent article ol li {
+    color: #202528;
     margin: 12px 0;
   }
 }
@@ -703,6 +705,7 @@ main.detailPost .postContent article h2, main.detailPost .postContent article h3
     margin: 24px 42px;
   }
   main.detailPost .postContent article ul li, main.detailPost .postContent article ol li {
+    color: #202528;
     margin: 12px 0;
   }
 }
