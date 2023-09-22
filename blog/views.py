@@ -35,14 +35,14 @@ class IndexView(View):
         """
         tag_id = request.GET.get('tag_id')
         search_query = request.GET.get('search')
-        show_tag_buttons = Tag.objects.filter(post__isnull=False).distinct()
+        show_tag_buttons = Tag.objects.filter(post__isnull = False).distinct()
 
         if tag_id:
-            posts = Post.objects.filter(tags__id=tag_id)
+            posts = Post.objects.filter(tags__id = tag_id).order_by('-date')
         elif search_query:
-            posts = Post.objects.filter(title__icontains=search_query)
+            posts = Post.objects.filter(title__icontains = search_query).order_by('-date')
         else:
-            posts = Post.objects.all()
+            posts = Post.objects.all().order_by('-date')
 
         return render(request, self.template_name, {'posts': posts, 'show_tag_buttons': show_tag_buttons})
 
