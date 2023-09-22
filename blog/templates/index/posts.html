@@ -1,10 +1,12 @@
 {% load static %}
 <section class="posts">
     {% for post in posts %}
-        <article >
-            <img src="{{post.image.url}}" alt="">       
-            <strong>{{post.title}}</strong>
-            <p>{{post.description}}</p>
+        <article class="card">
+            <img src="{{post.image.url}}" alt="">
+            <div class="body-card">
+                <strong>{{post.title}}</strong>
+                <p>{{post.description}}</p>
+            </div>
             {% if user.is_authenticated %}
                 <div class="all_options">
                     <a href="{% url 'DetailPost' post.id %}"><span>Leer más</span></a>
@@ -16,6 +18,10 @@
                     <a href="{% url 'DetailPost' post.id %}"><span>Leer más</span></a>
                 </div>
             {% endif %}
+            <div class="date">
+                <i class="bi bi-calendar"></i>
+                <span>{{post.date}}</span>
+            </div>
         </article>
     {% endfor %}
 </section>

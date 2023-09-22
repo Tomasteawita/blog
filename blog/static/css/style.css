@@ -416,7 +416,7 @@ section.posts article {
   min-width: 286px;
   max-width: 300px;
   height: 382px;
-  border-radius: 4px;
+  border-radius: 12px;
   border: 1px solid #d3cbda;
   color: #202528;
   margin: 42px auto;
@@ -426,10 +426,6 @@ section.posts article:hover {
   transform: scale(1.05) translate(0px, -8px); /* Puedes ajustar el valor para cambiar la escala */
   box-shadow: 1px 2px 4px 0px rgba(15, 22, 36, 0.25);
 }
-section.posts article strong {
-  margin: 12px 16px 4px 24px;
-  text-align: start;
-}
 section.posts article img {
   width: 100%;
   height: 180px;
@@ -437,66 +433,90 @@ section.posts article img {
   position: relative;
   top: 0px;
   left: 0px;
-  border-radius: 4px 4px 0px 0px;
+  border-radius: 12px 12px 0px 0px;
 }
-section.posts article p {
+section.posts article div.body-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+section.posts article div.body-card strong {
+  margin: 12px 16px 16px 24px;
+  text-align: start;
+}
+section.posts article div.body-card p {
   text-align: start;
   margin: 0px 21px;
   font-size: 0.8rem;
 }
-section.posts article div {
+section.posts article div.date {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: center;
+  margin: 0px auto 16px 21px;
+}
+section.posts article div.date span {
+  margin: 0px 8px;
+}
+section.posts article div.date span, section.posts article div.date i {
+  font-size: 11px;
+  color: #b9aec5;
+}
+section.posts article div:not(.body-card, .date) {
   display: grid;
   width: 100%;
 }
-section.posts article div.all_options {
+section.posts article div:not(.body-card, .date).all_options {
   grid-template-columns: 1fr 1fr;
   grid-row: 1fr 1fr;
   grid-template-areas: "view view" "edit delete";
   gap: 8px;
   justify-items: center;
 }
-section.posts article div.all_options a:first-child {
+section.posts article div:not(.body-card, .date).all_options a:first-child {
   grid-area: view;
 }
-section.posts article div.all_options a:nth-child(2) {
+section.posts article div:not(.body-card, .date).all_options a:nth-child(2) {
   grid-area: edit;
   background-color: #F1E9FE;
   margin-right: 4px;
 }
-section.posts article div.all_options a:last-child {
+section.posts article div:not(.body-card, .date).all_options a:last-child {
   grid-area: delete;
   background-color: #CA0000;
   margin-left: 4px;
 }
-section.posts article div.all_options a:nth-child(2), section.posts article div.all_options a:last-child {
+section.posts article div:not(.body-card, .date).all_options a:nth-child(2), section.posts article div:not(.body-card, .date).all_options a:last-child {
   border-radius: 50%;
   width: 32px;
   height: 32px;
   padding: 8px;
   transition: all 0.8s ease-in-out;
 }
-section.posts article div.all_options a:nth-child(2) i, section.posts article div.all_options a:last-child i {
+section.posts article div:not(.body-card, .date).all_options a:nth-child(2) i, section.posts article div:not(.body-card, .date).all_options a:last-child i {
   font-size: 16px;
 }
-section.posts article div.view {
+section.posts article div:not(.body-card, .date).view {
   place-content: center;
 }
-section.posts article div a {
+section.posts article div:not(.body-card, .date) a {
   display: grid;
   place-content: center;
   margin: 12px auto;
 }
-section.posts article div a:first-child {
+section.posts article div:not(.body-card, .date) a:first-child {
   border-radius: 32px;
   background: #F1E9FE;
   padding: 8px 16px;
   width: 155px;
   height: 32px;
 }
-section.posts article div a:first-child:hover {
+section.posts article div:not(.body-card, .date) a:first-child:hover {
   background: #c2a0fb;
 }
-section.posts article div a:first-child:active {
+section.posts article div:not(.body-card, .date) a:first-child:active {
   background: #7952B3;
   color: #ffffff;
 }

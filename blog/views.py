@@ -34,11 +34,13 @@ class IndexView(View):
                           etiquetas únicas relacionadas con los posts.
         """
         tag_id = request.GET.get('tag_id')
-        
+        search_query = request.GET.get('search')
         show_tag_buttons = Tag.objects.filter(post__isnull=False).distinct()
 
         if tag_id:
             posts = Post.objects.filter(tags__id=tag_id)
+        elif search_query:
+            posts = Post.objects.filter(title__icontains=search_query)
         else:
             posts = Post.objects.all()
 

@@ -12,7 +12,7 @@
             <ul>
                 <li class="close-canvas"><button id="close-button"><i class="bi bi-x-lg"></i></button></li>
                 <li><a href="{% url 'Index' %}">Inicio</a></li>
-                <li><a href="#contact">Contacto</a></li>
+                <li><a href="#contact" id="contact-anchor">Contacto</a></li>
                 {% if user.is_authenticated %}
                     <li><a href="{% url 'CreatePost' %}">Create Post</a></li>
                 {% endif %}
