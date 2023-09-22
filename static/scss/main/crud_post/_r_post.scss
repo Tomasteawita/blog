@@ -5,28 +5,31 @@ main.detailPost{
         >div:first-child{
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: start;
             justify-content: center;
             margin: 21px;
             h2{
                 font-size: 1.2rem;
                 font-weight: 400;
                 margin-bottom: 1rem;
+                text-align: start;
             }
             h3{
                 font-size: 1.1rem;
                 font-weight: 200;
                 margin-bottom: 1rem;
+                text-align: start;
             }
             p{
                 font-weight: 400;
                 margin-bottom: 1rem;
                 font-family: 'Poppins';
                 font-style: italic;
-                color: darken($white, 15%);
+                color: darken($white, 50%);
             }
             span{
-                text-decoration:underline
+                text-decoration:underline;
+                color: lighten($black, 10%);
             }
         }
         hr{
@@ -46,16 +49,20 @@ main.detailPost{
             }
             p{
                 margin: 12px auto;
-                line-height: 1.5rem;
+                line-height: 28px;
+                font-size: 16px;
             }
             ul,ol{
                 margin: 12px 24px;
                 li{
+                    color:$black;
                     margin: 12px 0;
+                    line-height: 24px;
                 }
             }
             h2, h3{
-                margin: 42px auto 12px auto;
+                margin: 42px auto 12px 0px;
+                text-align: start;
             }
 
         }
@@ -68,7 +75,7 @@ main.detailPost{
                     font-size: 2.4rem;
                 }
                 p{
-                    font-size: 1.2rem;
+                    font-size: 16px;
                 }
             }
             hr{
@@ -83,13 +90,14 @@ main.detailPost{
                     width: 80%;
                 }
                 p{
-                    font-size: 1.2rem;
+                    font-size: 16px;
                     margin-left: 0px;
                     margin-right:auto;
                 }
                 ul,ol{
                     margin: 24px 42px;
                     li{
+                        color:$black;
                         margin: 12px 0;
                     }
                 }
@@ -104,7 +112,7 @@ main.detailPost{
                     font-size: 2.4rem;
                 }
                 p{
-                    font-size: 1.2rem;
+                    font-size: 16px;
                 }
             }
             hr{
@@ -122,13 +130,14 @@ main.detailPost{
                     font-size: 1.6rem;
                 }
                 p{
-                    font-size: 1.2rem;
+                    font-size:16px;
                     margin-left: 0px;
                     margin-right:auto;
                 }
                 ul,ol{
                     margin: 24px 42px;
                     li{
+                        color:$black;
                         margin: 12px 0;
                     }
                 }

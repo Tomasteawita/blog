@@ -1,0 +1,10 @@
+section.welcome-message{
+    display: grid;
+    place-content: center;
+    color: $black;
+    @media only screen and (max-width: 768px) {
+        h1{
+            font-size: 1.6rem;
+        }
+    }
+}

@@ -2,13 +2,13 @@
     form:last-child{
         button.tag_search{
             display: inline-block;
-            background-color: $violet;
+            background-color: $white-silver;
             height: 24px;
             border-radius: 32px;
-            box-shadow: 1px 1px 2px 0px rgba(249, 249, 249, 0.25);
-            border: none;
+            // box-shadow: $box-shadow;
+            border: 1px solid darken($white-silver, 15%);
             padding: 4px 12px;
-            color: $white;
+            color: $black;
             cursor: pointer;
             transition: all 0.2s ease-in-out;
             span{
@@ -17,11 +17,11 @@
                 width: max-content;
             }
             &:hover{
-                background-color: $violet-hover;
-                box-shadow: 1px 1px 2px 0px rgba(249, 249, 249, 0.25);
+                background-color: $pink;
+                box-shadow: $box-shadow;
             }
             &:active{
-                background-color: $violet-active;
+                background-color: $white-silver;
             }
             @media only screen and (min-width: 1025px){
                 margin-top: 8px;

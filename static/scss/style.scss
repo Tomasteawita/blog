@@ -10,7 +10,8 @@
 @import 'main/crud_post/_r_post';
 @import 'main/navigation';
 @import 'main/crud_post/_cards-transition';
-
+@import 'main/h1';
+@import 'animations/loader_images';
 *{
     margin: 0;
     padding: 0;
@@ -20,9 +21,13 @@
 
 
 body{
-    background-color: $background
+    background-color: $white
 }
 
 section:not(.image-background.read_post){
     margin-bottom: 24px;
+}
+
+main{
+    margin-top: 32px;
 }

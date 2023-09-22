@@ -1,6 +1,6 @@
 footer{
-    background-color: $violet;
-    color: $white;
+    background-color: $white-silver;
+    color: $black;
     padding: 20px;
     text-align: center;
     font-size: 14px;
@@ -68,7 +68,7 @@ footer{
         }
     }
     a{
-        color: $white;
+        color: $black;
         text-decoration: none;
         &:hover{
             text-decoration: underline;
