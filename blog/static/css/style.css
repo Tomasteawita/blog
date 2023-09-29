@@ -450,6 +450,7 @@ section.posts article div.body-card p {
   text-align: start;
   margin: 0px 21px;
   font-size: 0.8rem;
+  line-height: 21px;
 }
 section.posts article div.date {
   display: flex;

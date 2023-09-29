@@ -33,3 +33,11 @@ DATABASES = {
     }
 }
 ```
+
+## En bash
+```bash
+source venv/bin/activate
+cd blog
+python manage.py collectstatic
+sudo systemctl restart apache2
+```
