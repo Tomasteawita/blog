@@ -321,6 +321,7 @@ footer a:hover {
 .search form:first-child input {
   width: 153px;
   height: 24px;
+  font-family: "Montserrat";
 }
 @media only screen and (min-width: 834px) {
   .search form:first-child input {
@@ -415,7 +416,7 @@ section.posts article {
   text-align: center;
   min-width: 286px;
   max-width: 300px;
-  height: 382px;
+  min-height: 460px;
   border-radius: 12px;
   border: 1px solid #d3cbda;
   color: #202528;
