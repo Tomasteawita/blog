@@ -10,8 +10,8 @@ services:
     env_file:
       - ./.env
     ports:
-      - 5435:5435
-    command: "-p 5435"
+      - 5432:5432
+    command: "-p 5432"
   
   web:
     build: 

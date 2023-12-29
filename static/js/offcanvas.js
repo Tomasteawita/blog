@@ -11,6 +11,6 @@ closeButton.addEventListener("click", () => {
   offcanvas.style.right = "-350px";
 });
 
-contaxtAnchor.addEventListener("click", () => {
+contactAnchor.addEventListener("click", () => {
   offcanvas.style.right = "-350px";
 });

@@ -7,7 +7,7 @@
 <meta property="og:title" content="Tomasteawita | blog">
 <meta property="og:description" content="Tomasteawita es un blog para emprendedores del deporte, donde se publican artículos sobre programación y análisis de datos aplicado a negocios y emprendimientos de profesionales del deporte con el objetivo de potenciar el crecimiento de su actividad.">
 <meta property="og:image" content="{% static 'imges/tomasteawita.png' %}">
-<meta property="og:url" content="https://tomasteawita.com">
+<meta property="og:url" content="https://tomasteawita.com/index">
 <meta property="og:site_name" content="Tomasteawita">
 <meta property="og:locale" content="es_ES">
 <meta property="og:type" content="website">
@@ -18,10 +18,10 @@
 {% block title %}Tomasteawita | blog{% endblock title %}
 {% block main %}
 <main>
-    {% include 'index/image-background.html' %}
-    {% include 'index/h1.html' %}
-    {% include 'index/search.html' %}
-    {% include 'index/posts.html' %}
+    {% include './image-background.html' %}
+    {% include './h1.html' %}
+    {% include './search.html' %}
+    {% include './posts.html' %}
     <div id="load-page">
         <div class="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
       </div> 

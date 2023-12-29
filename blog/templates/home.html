@@ -1,0 +1,52 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block meta %}
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="Tomasteawita">
+<meta property="og:title" content="Tomasteawita">
+<meta property="og:description" content="">
+<meta property="og:image" content="{% static 'imges/tomasteawita.png' %}">
+<meta property="og:url" content="https://tomasteawita.com">
+<meta property="og:site_name" content="Tomasteawita">
+<meta property="og:locale" content="es_ES">
+<meta property="og:type" content="website">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="es_LA">
+{% endblock meta %}
+{% block title %}Tomasteawita{% endblock title %}
+{% block main %}
+<main>
+    
+    <div id="load-page">
+        <div class="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+      </div> 
+</main>
+{% endblock main %}
+{% block scripts %}
+<script>
+    const loading = document.querySelector('#load-page');
+    const backgroundImage = new Image();
+
+    backgroundImage.src = "{% static 'images/tomasteawita.png' %}";
+
+    backgroundImage.onload = function() {
+        // Inicia el proceso de desvanecimiento
+        fadeOut(loading);
+    };
+
+    function fadeOut(element) {
+        let opacity = 1;
+        const fadeInterval = setInterval(function() {
+            opacity -= 0.05; // Puedes ajustar la velocidad de desvanecimiento cambiando este valor
+            element.style.opacity = opacity;
+            if (opacity <= 0) {
+                clearInterval(fadeInterval);
+                element.style.display = 'none'; // Oculta el elemento después del desvanecimiento
+            }
+        }, 50); // El tiempo entre cada paso del desvanecimiento (en milisegundos)
+    }
+
+</script>
+{% endblock scripts %}
