@@ -1,12 +1,16 @@
+{% load static %}
 <header>
     <nav>
-        <ul>
-            <li><a href="{% url 'Index' %}">Inicio</a></li>
-            <li><a href="#contact">Contacto</a></li>
-            {% if user.is_authenticated %}
-                <li><a href="{% url 'CreatePost' %}">Create Post</a></li>
-            {% endif %}
-        </ul>
+        <div class="links">
+            <a href="{% url 'Home' %}"><img src="{% static 'images/logo.png' %}" alt="tomasteawita"></a>
+            <ul>
+                <li><a href="{% url 'Index' %}">Inicio</a></li>
+                <li><a href="#contact">Contacto</a></li>
+                {% if user.is_authenticated %}
+                    <li><a href="{% url 'CreatePost' %}">Create Post</a></li>
+                {% endif %}
+            </ul>
+        </div>
         <button id="open-button"><i class="bi bi-list"></i></button>
         <div id="offcanvas">
             <ul>

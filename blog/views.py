@@ -18,7 +18,7 @@ class IndexView(View):
     Method:
         get(self, request): Procesa una solicitud GET para mostrar la página de inicio.
     """
-    template_name = 'index.html'
+    template_name = 'index/index.html'
 
     def get(self, request):
         """
@@ -45,6 +45,10 @@ class IndexView(View):
             posts = Post.objects.all().order_by('-date')
 
         return render(request, self.template_name, {'posts': posts, 'show_tag_buttons': show_tag_buttons})
+
+class HomeView(View):
+    def get(self, request):
+        return render(request, 'home.html')
 
 class CreatePostView(CreateView, LoginRequiredMixin):
     model = Post

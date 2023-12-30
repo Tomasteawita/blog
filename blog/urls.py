@@ -5,7 +5,6 @@ from django.conf.urls.static import static
 
 
 url_crud_post = [
-    path('create/', CreatePostView.as_view(), name = "CreatePost"),
     path('delete/<pk>', DeletePostView.as_view(), name = "DeletePost"),
     path('detail/<pk>', DetailPostView.as_view(), name = "DetailPost"),
     path('edit/<pk>', EditPostView.as_view(), name = "EditPost"),
@@ -13,5 +12,6 @@ url_crud_post = [
 ]
 
 urlpatterns = [
-    path('', IndexView.as_view(), name = "Index"),
+    path('index/', IndexView.as_view(), name = "Index"),
+    path('', HomeView.as_view(), name = "Home"),
 ] + url_crud_post + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -15,7 +15,7 @@ class Post(models.Model):
     body = RichTextField(null=True, blank=True)
     image = models.ImageField(upload_to='images',null=True,blank=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE,null=True,blank=True)
-    tags = models.ManyToManyField(Tag, null=True, blank=True)
+    tags = models.ManyToManyField(Tag, blank=True)
     date = models.DateTimeField(null=True)
     state = models.BooleanField('Active',default=False)
     
