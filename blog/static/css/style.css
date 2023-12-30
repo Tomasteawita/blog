@@ -58,12 +58,22 @@ header {
   width: 100%;
   z-index: 100;
 }
+@media only screen and (max-width: 600px) {
+  header {
+    height: 58px;
+  }
+}
 header nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
   margin: auto 32px;
+}
+@media only screen and (max-width: 600px) {
+  header nav {
+    margin-top: 6px;
+  }
 }
 header nav .links {
   display: flex;
@@ -923,6 +933,74 @@ section.welcome-message {
     opacity: 0.5;
   }
 }
+.presentation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 72px;
+  background-color: #F9F9F9;
+}
+@media only screen and (min-width: 472px) {
+  .presentation {
+    padding: 96px;
+    flex-direction: row;
+  }
+  .presentation div {
+    margin-right: 32px;
+  }
+  .presentation div p {
+    max-width: 400px;
+  }
+  .presentation img {
+    margin-left: 32px;
+  }
+}
+.presentation div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 2px 16px;
+  max-width: 400px;
+}
+.presentation div h1 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-decoration: underline;
+}
+@media only screen and (min-width: 816px) {
+  .presentation div h1 {
+    font-size: 32px;
+  }
+}
+.presentation div p {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  line-height: 18px;
+}
+@media only screen and (min-width: 816px) {
+  .presentation div p {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+.presentation div h1, .presentation div p {
+  color: #4e4e4e;
+}
+.presentation img {
+  width: 156px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+@media only screen and (min-width: 816px) {
+  .presentation img {
+    width: 256px;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;

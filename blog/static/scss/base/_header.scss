@@ -35,11 +35,16 @@ header {
   left: 0px;
   width: 100%;
   z-index: 100;
-
+  @media only screen and (max-width:600px) {
+    height: 58px;
+  }
   nav {
     @include flex-space-between;
     flex-direction: row;
     margin: auto 32px;
+    @media only screen and (max-width:600px) {
+      margin-top: 6px;
+    }
     
 
     .links {

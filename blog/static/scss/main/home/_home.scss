@@ -1,0 +1,60 @@
+@mixin flex($direction: row, $justify: center, $align: center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+.presentation{
+    @include flex(column, center, center);
+    padding: 72px;
+    background-color: $white-f9;
+    @media only screen and (min-width: 472px){
+        padding: 96px;
+        flex-direction: row;
+        div{
+            margin-right: 32px;
+            p{
+                max-width: 400px;
+            }
+        }
+        img{
+            margin-left: 32px
+        }
+    }
+    div{
+        @include flex(column, flex-start, flex-start);
+        margin: 2px 16px;
+        max-width: 400px;
+        h1{
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-decoration: underline;
+            @media only screen and (min-width: 816px){
+                font-size: 32px;
+            }
+        }
+        p{
+            font-size: 14px;
+            font-weight: 400;
+            margin-bottom: 1rem;
+            line-height: 18px;
+            @media only screen and (min-width: 816px){
+                font-size: 18px;
+                line-height: 24px;
+            }
+        }
+        h1, p{
+            color:$black-low;
+        }
+    }
+    img{
+        width: 156px;
+        object-fit: cover;
+        border-radius: 50%;
+        @media only screen and (min-width: 816px){
+            width: 256px;
+        }
+    }
+}
