@@ -8,17 +8,12 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
-
-DATABASE
-ALLOWED_HOST
-DEGUB
-CRSF_TRUSTED_ORIGINS
 """
 
 from pathlib import Path
 import os
 import secrets
-from decouple import config, Csv
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -31,19 +26,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = secrets.token_hex(32)
 
-DEBUG = True
-#DEBUG = False
-#SESSION_COOKIE_SECURE = True
-#CSRF_COOKIE_SECURE = True
-#CRSF_TRUSTED_ORIGINS = ['https://tomasteawita.com', 'https://www.tomasteawita.com']
-#SECURE_HSTS_INCLUDE_SUBDOMAINS = True
-#SECURE_HSTS_PRELOAD = True
+DEBUG = config('DEBUG', default=False, cast=bool)
 
+CRSF_TRUSTED_ORIGINS = config('ALLOWED_HOSTS').split(',')
 
-#SECURE_HSTS_SECONDS = 31536000
-#SECURE_SSL_REDIRECT = True
-#ALLOWED_HOSTS = ['tomasteawita.com', 'www.tomasteawita.com', 'localhost', '62.72.24.205']
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = config('ALLOWED_HOSTS').split(',')
 
 # Application definition
 
@@ -93,17 +80,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'tomasteawita_blog.wsgi.application'
 
 
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.postgresql',
-#        'NAME': 'tomasteawita_blog_db',
-#        'USER': 'tomasteawita',
-#        'PASSWORD': 'TomasteawitaProyecta2002!',
-#        'HOST': 'localhost',
-#        'PORT': '5432'
-#    }
-#}
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -111,7 +87,7 @@ DATABASES = {
         'USER': config('POSTGRES_USER'),
         'PASSWORD': config('POSTGRES_PASSWORD'),
         'HOST': config('POSTGRES_HOST'),
-        'PORT': config('POSTGRES_PORT')  # Asegúrate de que coincida con el puerto del contenedor de PostgreSQL
+        'PORT': config('POSTGRES_PORT')
     }
 }
 

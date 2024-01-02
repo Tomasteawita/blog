@@ -5,6 +5,14 @@
     align-items: $align;
 }
 
+main.home{
+    section{
+        h1,h2,p{
+            color:$black-low;            
+        }
+    }
+}
+
 .presentation{
     @include flex(column, center, center);
     padding: 72px;
@@ -45,9 +53,6 @@
                 line-height: 24px;
             }
         }
-        h1, p{
-            color:$black-low;
-        }
     }
     img{
         width: 156px;
@@ -55,6 +60,29 @@
         border-radius: 50%;
         @media only screen and (min-width: 816px){
             width: 256px;
+        }
+    }
+}
+
+.about-me{
+    padding: 72px 24px;
+    h2{
+        font-size: 18px;
+        margin-bottom: 24px;
+    }
+    p{
+        font-size: 14px;
+        line-height: 18px;
+        margin-bottom: 2rem;
+    }
+    @media only screen and (min-width: 816px){
+        padding: 72px 212px;
+        h2{
+            font-size: 24px;
+        }
+        p{
+            font-size: 18px;
+            line-height: 24px;
         }
     }
 }

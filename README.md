@@ -10,6 +10,8 @@ POSTGRES_PASSWORD=postgres
 POSTGRES_HOST_AUTH_METHOD=trust
 POSTGRES_PORT=5432
 POSTGRES_HOST=postgre_db
+ALLOWED_HOSTS=*
+DEBUG=True
 ```
 a la misma altura que el archivo docker-compose.yml
 * Correr el siguiente comando en una terminal en la misma altura que el archivo docker-compose.yml:
