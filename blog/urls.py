@@ -12,6 +12,6 @@ url_crud_post = [
 ]
 
 urlpatterns = [
-    path('index/', IndexView.as_view(), name = "Index"),
+    path('blog/', IndexView.as_view(), name = "BlogWeb"),
     path('', HomeView.as_view(), name = "Home"),
 ] + url_crud_post + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

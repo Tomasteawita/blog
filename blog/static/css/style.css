@@ -933,6 +933,10 @@ section.welcome-message {
     opacity: 0.5;
   }
 }
+main.home section h1, main.home section h2, main.home section p {
+  color: #4e4e4e;
+}
+
 .presentation {
   display: flex;
   flex-direction: column;
@@ -987,9 +991,6 @@ section.welcome-message {
     line-height: 24px;
   }
 }
-.presentation div h1, .presentation div p {
-  color: #4e4e4e;
-}
 .presentation img {
   width: 156px;
   object-fit: cover;
@@ -998,6 +999,31 @@ section.welcome-message {
 @media only screen and (min-width: 816px) {
   .presentation img {
     width: 256px;
+  }
+}
+
+.about-me {
+  padding: 72px 24px;
+}
+.about-me h2 {
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+.about-me p {
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 2rem;
+}
+@media only screen and (min-width: 816px) {
+  .about-me {
+    padding: 72px 212px;
+  }
+  .about-me h2 {
+    font-size: 24px;
+  }
+  .about-me p {
+    font-size: 18px;
+    line-height: 24px;
   }
 }
 
